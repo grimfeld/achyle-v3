@@ -1,0 +1,66 @@
+{
+  "platform": "nextjs",
+  "code": {
+    "lang": "ts",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
+  },
+  "images": {
+    "scheme": "public-files",
+    "publicDir": "../public",
+    "publicUrlPrefix": "/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+      "projectApiToken": "7yaq8lkuPTfPJUP9SepoQIu08oGMf0X9CnaOzemuCl0im0RIf981m1YnNXVSUOPczJFCLch5KyIgjDZVbXZqgQ",
+      "projectName": "Achyle2",
+      "version": "latest",
+      "cssFilePath": "plasmic/achyle_2/plasmic_achyle_2.module.css",
+      "components": [
+        {
+          "id": "kyoneW7tS_",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        }
+      ],
+      "icons": [],
+      "images": [],
+      "indirect": false,
+      "codeComponents": []
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": [
+      {
+        "id": "5WudJONqca",
+        "name": "Screen",
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "contextFilePath": "plasmic/achyle_2/PlasmicGlobalVariant__Screen.tsx"
+      }
+    ]
+  },
+  "nextjsConfig": {
+    "pagesDir": "../pages"
+  },
+  "cliVersion": "0.1.166",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.166/dist/plasmic.schema.json"
+}
