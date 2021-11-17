@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Script from 'next/script'
 import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/host'
+import InputRange from "@components/InputRange"
 
 // You can register any code components that you want to use here; see
 // https://docs.plasmic.app/learn/code-components-ref/
@@ -10,6 +11,12 @@ import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/host'
 // https://docs.plasmic.app/learn/app-hosting/#set-a-plasmic-project-to-use-your-app-host
 
 // registerComponent(...)
+
+registerComponent(InputRange, {
+  name: 'InputRange',
+  props: {},
+  importPath: './components/InputRange'
+})
 
 export default function Host () {
   return (

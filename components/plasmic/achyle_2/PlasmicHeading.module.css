@@ -1,0 +1,24 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+}
+.freeBox {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+}
+.slotTargetContent {
+  color: #ffffff /* plasmic-token: JSKB1tujS */;
+  font-family: Belleza /* plasmic-token: 4OZR8UGM1 */;
+  font-size: 48px /* plasmic-token: j-39-_-TV */;
+}
+.slotTargetContent__dark {
+  color: #121a29 /* plasmic-token: KWOBCcezh */;
+}

@@ -1,0 +1,10 @@
+.root {
+  display: inline-flex;
+  flex-direction: row;
+  position: relative;
+  width: auto;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}

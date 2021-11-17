@@ -1,5 +1,246 @@
 {
-  "props": [],
+  "props": [
+    {
+      "name": "CTA Background",
+      "type": "color",
+      "value": "#EBF0F226",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "Eu1OZiC1i"
+      }
+    },
+    {
+      "name": "EggShell",
+      "type": "color",
+      "value": "#EDE5D6",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "wOc9ai9lI"
+      }
+    },
+    {
+      "name": "Green Screen",
+      "type": "color",
+      "value": "#66A699",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "WOaOUZL1h"
+      }
+    },
+    {
+      "name": "Green Screen Hover",
+      "type": "color",
+      "value": "#26947D",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "IiRRr78lM"
+      }
+    },
+    {
+      "name": "Grey 100",
+      "type": "color",
+      "value": "#EBF0F2",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "0fyKU1aD3"
+      }
+    },
+    {
+      "name": "Grey 300",
+      "type": "color",
+      "value": "#C2CFD6",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "CF5KwtKkV"
+      }
+    },
+    {
+      "name": "H1",
+      "type": "fontsize",
+      "value": "72px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "pV2m65T_3"
+      }
+    },
+    {
+      "name": "H2",
+      "type": "fontsize",
+      "value": "64px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "6gzmibCEh"
+      }
+    },
+    {
+      "name": "H3",
+      "type": "fontsize",
+      "value": "48px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "j-39-_-TV"
+      }
+    },
+    {
+      "name": "H4",
+      "type": "fontsize",
+      "value": "36px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "KXQj2QAld"
+      }
+    },
+    {
+      "name": "H5",
+      "type": "fontsize",
+      "value": "24px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "ndDV0LMEy"
+      }
+    },
+    {
+      "name": "H6",
+      "type": "fontsize",
+      "value": "18px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "nMA8eomVo"
+      }
+    },
+    {
+      "name": "Heading Dark",
+      "type": "color",
+      "value": "#121A29",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "KWOBCcezh"
+      }
+    },
+    {
+      "name": "Heading Light",
+      "type": "color",
+      "value": "#FFFFFF",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "JSKB1tujS"
+      }
+    },
+    {
+      "name": "Headings",
+      "type": "fontfamily",
+      "value": "Belleza",
+      "category": "fontfamily",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "4OZR8UGM1"
+      }
+    },
+    {
+      "name": "Label",
+      "type": "fontsize",
+      "value": "13px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "Ny-FUqhlT"
+      }
+    },
+    {
+      "name": "Midnight Green",
+      "type": "color",
+      "value": "#2B4F57",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "tU6KMCZYm"
+      }
+    },
+    {
+      "name": "Paragraphs",
+      "type": "fontsize",
+      "value": "16px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "F3aqJ_4sR"
+      }
+    },
+    {
+      "name": "Raisin Black",
+      "type": "color",
+      "value": "#121A29",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "Hpw-5dGGk"
+      }
+    },
+    {
+      "name": "Teal Blue",
+      "type": "color",
+      "value": "#3D707D",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "P5Mf1KOrz"
+      }
+    },
+    {
+      "name": "Texts",
+      "type": "fontfamily",
+      "value": "Inter",
+      "category": "fontfamily",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "Mnz7nYzeb"
+      }
+    },
+    {
+      "name": "Texts Dark",
+      "type": "color",
+      "value": "#121A29BF",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "0ns3OrR_c"
+      }
+    },
+    {
+      "name": "Texts Light",
+      "type": "color",
+      "value": "#EBF0F2BF",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "PWLUNeUui"
+      }
+    },
+    {
+      "name": "UnnamedStyleToken",
+      "type": "opacity",
+      "value": "1",
+      "category": "opacity",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "dbwfu9IYE"
+      }
+    }
+  ],
   "global": {
     "meta": {
       "source": "plasmic.app"

@@ -33,11 +33,29 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import Section from "../../Section"; // plasmic-import: -MewncD7Wg3/component
+import Navbar from "../../Navbar"; // plasmic-import: TR4BFzjq4x/component
+import Button from "../../Button"; // plasmic-import: KxQ-6Oe5Yl/component
+import Heading from "../../Heading"; // plasmic-import: iLkYtMJ5YQ/component
+import Paragraph from "../../Paragraph"; // plasmic-import: ds4yKdokUn/component
+import Pill from "../../Pill"; // plasmic-import: lXfsMEnWoU/component
+import ListItem from "../../ListItem"; // plasmic-import: xUitMmxl0F/component
+import Divider from "../../Divider"; // plasmic-import: 79e3ncUiiG/component
+import Rectangle from "../../Rectangle"; // plasmic-import: hVvONWSKSkN/component
+import Simulator from "../../Simulator"; // plasmic-import: HMhxayluTN/component
+
+import { useScreenVariants } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: 5WudJONqca/globalVariant
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-import: global/defaultcss
 import * as projectcss from "./plasmic_achyle_2.module.css"; // plasmic-import: 9mqNJRrUCJdF1Qi4kUEnK1/projectcss
 import * as sty from "./PlasmicHomepage.module.css"; // plasmic-import: kyoneW7tS_/css
+
+import ContractIcon from "./icons/PlasmicIcon__Contract"; // plasmic-import: fMAKgq5kC/icon
+import TimeIcon from "./icons/PlasmicIcon__Time"; // plasmic-import: uWFrTHISq/icon
+import CalendarIcon from "./icons/PlasmicIcon__Calendar"; // plasmic-import: p1duHFCHl/icon
+import CheckIcon from "./icons/PlasmicIcon__Check"; // plasmic-import: O8HA5RKUW/icon
+import CreditCardIcon from "./icons/PlasmicIcon__CreditCard"; // plasmic-import: 3A6Fw1dQU/icon
 
 export type PlasmicHomepage__VariantMembers = {};
 
@@ -51,6 +69,13 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
+  background1?: p.Flex<"div">;
+  navbar?: p.Flex<typeof Navbar>;
+  concentrezVousSurLessentielAchyleSoccuperaDuReste?: p.Flex<"div">;
+  background2?: p.Flex<"div">;
+  divider?: p.Flex<typeof Divider>;
+  background3?: p.Flex<"div">;
+  simulator?: p.Flex<typeof Simulator>;
 };
 
 export interface DefaultHomepageProps {
@@ -65,6 +90,10 @@ function PlasmicHomepage__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, args, overrides, forNode, dataFetches } = props;
+
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariants()
+  });
 
   return (
     <React.Fragment>
@@ -88,23 +117,789 @@ function PlasmicHomepage__RenderFunc(props: {
           hasGap={true}
           className={classNames(
             defaultcss.all,
+            projectcss.all,
             projectcss.root_reset,
             sty.root
           )}
-        />
+        >
+          <div
+            data-plasmic-name={"background1"}
+            data-plasmic-override={overrides.background1}
+            className={classNames(
+              defaultcss.all,
+              projectcss.all,
+              sty.background1
+            )}
+          >
+            <Section
+              className={classNames("__wab_instance", sty.section__zgAiz)}
+            >
+              <Navbar
+                data-plasmic-name={"navbar"}
+                data-plasmic-override={overrides.navbar}
+                className={classNames("__wab_instance", sty.navbar)}
+              />
+
+              <div
+                className={classNames(
+                  defaultcss.all,
+                  projectcss.all,
+                  sty.freeBox__nmQt8
+                )}
+              >
+                <div
+                  className={classNames(
+                    defaultcss.all,
+                    projectcss.all,
+                    sty.freeBox___7BbBe
+                  )}
+                >
+                  <Heading
+                    className={classNames(
+                      "__wab_instance",
+                      sty.heading___6NcJs
+                    )}
+                    content={
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text__u8Ke6
+                        )}
+                      >
+                        {"La rédaction de vos contrats"}
+                      </div>
+                    }
+                  />
+
+                  <Heading
+                    className={classNames("__wab_instance", sty.heading__gDlWa)}
+                    content={
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text__rZEtF
+                        )}
+                      >
+                        {"simple et automatisée"}
+                      </div>
+                    }
+                  />
+
+                  <Paragraph
+                    className={classNames(
+                      "__wab_instance",
+                      sty.paragraph__uzKg
+                    )}
+                  >
+                    {
+                      "Grâce à Achyle, rédigez vos contrats à la perfection tout\nen gagnant du temps"
+                    }
+                  </Paragraph>
+
+                  <Paragraph
+                    className={classNames(
+                      "__wab_instance",
+                      sty.paragraph__gxeTe
+                    )}
+                  >
+                    {"Un grand nombre d'entreprises nous font confiance"}
+                  </Paragraph>
+                </div>
+
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__lIbGa)}
+                  displayHeight={"auto" as const}
+                  displayMaxHeight={"none" as const}
+                  displayMaxWidth={"600px" as const}
+                  displayMinHeight={"0" as const}
+                  displayMinWidth={"0" as const}
+                  displayWidth={"auto" as const}
+                  loading={"lazy" as const}
+                  src={{
+                    src: "/plasmic/achyle_2/images/hero.png",
+                    fullWidth: 636,
+                    fullHeight: 883,
+                    aspectRatio: undefined
+                  }}
+                />
+              </div>
+            </Section>
+          </div>
+
+          <Section className={classNames("__wab_instance", sty.section__exN5J)}>
+            <Heading
+              className={classNames("__wab_instance", sty.heading__rDmHw)}
+              content={
+                <div
+                  data-plasmic-name={
+                    "concentrezVousSurLessentielAchyleSoccuperaDuReste"
+                  }
+                  data-plasmic-override={
+                    overrides.concentrezVousSurLessentielAchyleSoccuperaDuReste
+                  }
+                  className={classNames(
+                    defaultcss.all,
+                    projectcss.all,
+                    defaultcss.__wab_text,
+                    sty.concentrezVousSurLessentielAchyleSoccuperaDuReste
+                  )}
+                >
+                  {
+                    "Concentrez-vous sur l’essentiel,\nAchyle s’occupera du reste."
+                  }
+                </div>
+              }
+              dark={"dark" as const}
+            />
+
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(
+                defaultcss.all,
+                projectcss.all,
+                sty.freeBox__shRmh
+              )}
+            >
+              <Pill
+                className={classNames("__wab_instance", sty.pill__ylIw)}
+                text={
+                  <Paragraph
+                    className={classNames(
+                      "__wab_instance",
+                      sty.paragraph__uRvc6
+                    )}
+                    dark={"dark" as const}
+                  >
+                    {"De contrats à générer"}
+                  </Paragraph>
+                }
+                title={
+                  <Heading
+                    className={classNames("__wab_instance", sty.heading__dYAp)}
+                    content={
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text__dYqkG
+                        )}
+                      >
+                        {"Nb. Illimité"}
+                      </div>
+                    }
+                    dark={"dark" as const}
+                  />
+                }
+              />
+
+              <Pill
+                className={classNames("__wab_instance", sty.pill__eiXx)}
+                icon={
+                  <TimeIcon
+                    className={classNames(
+                      defaultcss.all,
+                      projectcss.all,
+                      sty.svg__i6Sx2
+                    )}
+                    role={"img"}
+                  />
+                }
+                text={
+                  <Paragraph
+                    className={classNames(
+                      "__wab_instance",
+                      sty.paragraph__pFmR9
+                    )}
+                    dark={"dark" as const}
+                  >
+                    {"De rédiger un contrat"}
+                  </Paragraph>
+                }
+                title={
+                  <Heading
+                    className={classNames(
+                      "__wab_instance",
+                      sty.heading___15ClK
+                    )}
+                    content={
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text__ljUkp
+                        )}
+                      >
+                        {"3x plus rapide"}
+                      </div>
+                    }
+                    dark={"dark" as const}
+                  />
+                }
+              />
+
+              <Pill
+                className={classNames("__wab_instance", sty.pill__f3AJ)}
+                icon={
+                  <CalendarIcon
+                    className={classNames(
+                      defaultcss.all,
+                      projectcss.all,
+                      sty.svg___2Fw3C
+                    )}
+                    role={"img"}
+                  />
+                }
+                text={
+                  <Paragraph
+                    className={classNames(
+                      "__wab_instance",
+                      sty.paragraph___3I9FD
+                    )}
+                    dark={"dark" as const}
+                  >
+                    {"Accessible"}
+                  </Paragraph>
+                }
+                title={
+                  <Heading
+                    className={classNames("__wab_instance", sty.heading__j6OW0)}
+                    content={
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text__f4Nr
+                        )}
+                      >
+                        {"24/24h"}
+                      </div>
+                    }
+                    dark={"dark" as const}
+                  />
+                }
+              />
+
+              <Pill
+                className={classNames("__wab_instance", sty.pill__oCg9)}
+                icon={
+                  <CheckIcon
+                    className={classNames(
+                      defaultcss.all,
+                      projectcss.all,
+                      sty.svg__nwxnW
+                    )}
+                    role={"img"}
+                  />
+                }
+                text={
+                  <Paragraph
+                    className={classNames(
+                      "__wab_instance",
+                      sty.paragraph__rNYfY
+                    )}
+                    dark={"dark" as const}
+                  >
+                    {"D’erreurs réduites"}
+                  </Paragraph>
+                }
+                title={
+                  <Heading
+                    className={classNames(
+                      "__wab_instance",
+                      sty.heading___1RBvT
+                    )}
+                    content={
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text__aCTsu
+                        )}
+                      >
+                        {"95%"}
+                      </div>
+                    }
+                    dark={"dark" as const}
+                  />
+                }
+              />
+
+              <Pill
+                className={classNames("__wab_instance", sty.pill__k87XN)}
+                icon={
+                  <CreditCardIcon
+                    className={classNames(
+                      defaultcss.all,
+                      projectcss.all,
+                      sty.svg__dRNzN
+                    )}
+                    role={"img"}
+                  />
+                }
+                text={
+                  <Paragraph
+                    className={classNames(
+                      "__wab_instance",
+                      sty.paragraph__m4SnF
+                    )}
+                    dark={"dark" as const}
+                  >
+                    {"Pour un audit gratuit"}
+                  </Paragraph>
+                }
+                title={
+                  <Heading
+                    className={classNames("__wab_instance", sty.heading__mbGZs)}
+                    content={
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text__uVvEp
+                        )}
+                      >
+                        {"0€"}
+                      </div>
+                    }
+                    dark={"dark" as const}
+                  />
+                }
+              />
+            </p.Stack>
+          </Section>
+
+          <div
+            data-plasmic-name={"background2"}
+            data-plasmic-override={overrides.background2}
+            className={classNames(
+              defaultcss.all,
+              projectcss.all,
+              sty.background2
+            )}
+          >
+            <Section
+              className={classNames("__wab_instance", sty.section__pgWvy)}
+            >
+              <Heading
+                className={classNames("__wab_instance", sty.heading__n5B7I)}
+                content={"Révolutionnez votre fonction juridique"}
+                dark={"dark" as const}
+              />
+
+              <div
+                className={classNames(
+                  defaultcss.all,
+                  projectcss.all,
+                  sty.freeBox__qkjic
+                )}
+              >
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__ceXns)}
+                  displayHeight={"auto" as const}
+                  displayMaxHeight={"none" as const}
+                  displayMaxWidth={"100%" as const}
+                  displayMinHeight={"0" as const}
+                  displayMinWidth={"0" as const}
+                  displayWidth={"auto" as const}
+                  loading={"lazy" as const}
+                  src={{
+                    src: "/plasmic/achyle_2/images/fonctionJuridique.png",
+                    fullWidth: 526,
+                    fullHeight: 296,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(
+                    defaultcss.all,
+                    projectcss.all,
+                    sty.freeBox__iyK6
+                  )}
+                >
+                  <ListItem
+                    className={classNames("__wab_instance", sty.listItem__auwX)}
+                  />
+
+                  <ListItem
+                    className={classNames(
+                      "__wab_instance",
+                      sty.listItem__d4S6Q
+                    )}
+                  />
+
+                  <ListItem
+                    className={classNames(
+                      "__wab_instance",
+                      sty.listItem__aZsOh
+                    )}
+                  />
+                </p.Stack>
+              </div>
+
+              <Divider
+                data-plasmic-name={"divider"}
+                data-plasmic-override={overrides.divider}
+                className={classNames("__wab_instance", sty.divider)}
+              />
+
+              <div
+                className={classNames(
+                  defaultcss.all,
+                  projectcss.all,
+                  sty.freeBox__sUueU
+                )}
+              >
+                <Heading
+                  className={classNames("__wab_instance", sty.heading__oinwt)}
+                  content={
+                    "Vous souhaitez mettre en place\n Achyle dans votre entreprise ?"
+                  }
+                  dark={"dark" as const}
+                />
+              </div>
+            </Section>
+          </div>
+
+          <Section className={classNames("__wab_instance", sty.section__s3VmY)}>
+            <Heading
+              className={classNames("__wab_instance", sty.heading__a33Jd)}
+              content={"Digitalisez vos contrats en quelques clics"}
+              dark={"dark" as const}
+            />
+
+            <Paragraph
+              className={classNames("__wab_instance", sty.paragraph__lbkqq)}
+              dark={"dark" as const}
+            >
+              {"Comment ça marche ? C’est très simple !"}
+            </Paragraph>
+
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(
+                defaultcss.all,
+                projectcss.all,
+                sty.freeBox___8Diq8
+              )}
+            >
+              <Rectangle
+                className={classNames("__wab_instance", sty.rectangle__nRxVn)}
+                list={
+                  <React.Fragment>
+                    <ListItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.listItem___89Pjs
+                      )}
+                    >
+                      <Paragraph
+                        className={classNames(
+                          "__wab_instance",
+                          sty.paragraph__kdY76
+                        )}
+                        dark={"dark" as const}
+                      >
+                        {"Définissons le nombre de documents à automatiser"}
+                      </Paragraph>
+                    </ListItem>
+
+                    <ListItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.listItem__zgmm
+                      )}
+                    >
+                      <Paragraph
+                        className={classNames(
+                          "__wab_instance",
+                          sty.paragraph__jNhKz
+                        )}
+                        dark={"dark" as const}
+                      >
+                        {"Élaborations de(s) formulaire(s)"}
+                      </Paragraph>
+                    </ListItem>
+
+                    <ListItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.listItem__uLyVi
+                      )}
+                    >
+                      <Paragraph
+                        className={classNames(
+                          "__wab_instance",
+                          sty.paragraph__f1X2D
+                        )}
+                        dark={"dark" as const}
+                      >
+                        {"Paramétrage de notre plateforme"}
+                      </Paragraph>
+                    </ListItem>
+                  </React.Fragment>
+                }
+                title={
+                  <Heading
+                    className={classNames(
+                      "__wab_instance",
+                      sty.heading___3Fqpu
+                    )}
+                    content={
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text__pnhQr
+                        )}
+                      >
+                        {"Évaluons ensemble\nvos besoins"}
+                      </div>
+                    }
+                    dark={"dark" as const}
+                  />
+                }
+              />
+
+              <Rectangle
+                className={classNames("__wab_instance", sty.rectangle___5PBbX)}
+                image={
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img___7RWwp)}
+                    displayHeight={"142px" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"142px" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/achyle_2/images/form.png",
+                      fullWidth: 142,
+                      fullHeight: 142,
+                      aspectRatio: undefined
+                    }}
+                  />
+                }
+                list={
+                  <React.Fragment>
+                    <ListItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.listItem__xxbY1
+                      )}
+                    >
+                      <Paragraph
+                        className={classNames(
+                          "__wab_instance",
+                          sty.paragraph__se1EG
+                        )}
+                        dark={"dark" as const}
+                      >
+                        {"Connectez-vous sur votre plateforme sécurisée"}
+                      </Paragraph>
+                    </ListItem>
+
+                    <ListItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.listItem___8TTdY
+                      )}
+                    >
+                      <Paragraph
+                        className={classNames(
+                          "__wab_instance",
+                          sty.paragraph__loh1R
+                        )}
+                        dark={"dark" as const}
+                      >
+                        {"Répondez au formulaire personnalisé"}
+                      </Paragraph>
+                    </ListItem>
+                  </React.Fragment>
+                }
+                title={
+                  <Heading
+                    className={classNames("__wab_instance", sty.heading__b3CPt)}
+                    content={
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text__eRhxY
+                        )}
+                      >
+                        {"Complétez votre\nformulaire"}
+                      </div>
+                    }
+                    dark={"dark" as const}
+                  />
+                }
+              />
+
+              <Rectangle
+                className={classNames("__wab_instance", sty.rectangle___33MDp)}
+                image={
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__xj6Co)}
+                    displayHeight={"142px" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"142px" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/achyle_2/images/docs.png",
+                      fullWidth: 142,
+                      fullHeight: 142,
+                      aspectRatio: undefined
+                    }}
+                  />
+                }
+                list={
+                  <ListItem
+                    className={classNames(
+                      "__wab_instance",
+                      sty.listItem__diztV
+                    )}
+                  >
+                    <Paragraph
+                      className={classNames(
+                        "__wab_instance",
+                        sty.paragraph___7QNa
+                      )}
+                      dark={"dark" as const}
+                    >
+                      {
+                        "En quelques clics, vos documents sont finalisés et prêts à être envoyés"
+                      }
+                    </Paragraph>
+                  </ListItem>
+                }
+                title={
+                  <Heading
+                    className={classNames(
+                      "__wab_instance",
+                      sty.heading___9Bdj8
+                    )}
+                    content={
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text___5KvBi
+                        )}
+                      >
+                        {"Générez \nautomatiquement\nvos documents"}
+                      </div>
+                    }
+                    dark={"dark" as const}
+                  />
+                }
+              />
+            </p.Stack>
+          </Section>
+
+          <div
+            data-plasmic-name={"background3"}
+            data-plasmic-override={overrides.background3}
+            className={classNames(
+              defaultcss.all,
+              projectcss.all,
+              sty.background3
+            )}
+          >
+            <Section
+              className={classNames("__wab_instance", sty.section__fpDj2)}
+            >
+              <Heading
+                className={classNames("__wab_instance", sty.heading__n6Ulk)}
+                content={"Combien de temps allez-vous gagner ?"}
+              />
+
+              <Heading
+                className={classNames("__wab_instance", sty.heading__f6Ldv)}
+                content={
+                  <div
+                    className={classNames(
+                      defaultcss.all,
+                      projectcss.all,
+                      defaultcss.__wab_text,
+                      sty.text__gOmNm
+                    )}
+                  >
+                    {"Achyle vous permet de vous concentrer sur l'essentiel"}
+                  </div>
+                }
+              />
+
+              <Simulator
+                data-plasmic-name={"simulator"}
+                data-plasmic-override={overrides.simulator}
+                className={classNames("__wab_instance", sty.simulator)}
+              />
+            </Section>
+          </div>
+        </p.Stack>
       </div>
     </React.Fragment>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: [
+    "root",
+    "background1",
+    "navbar",
+    "concentrezVousSurLessentielAchyleSoccuperaDuReste",
+    "background2",
+    "divider",
+    "background3",
+    "simulator"
+  ],
+  background1: ["background1", "navbar"],
+  navbar: ["navbar"],
+  concentrezVousSurLessentielAchyleSoccuperaDuReste: [
+    "concentrezVousSurLessentielAchyleSoccuperaDuReste"
+  ],
+  background2: ["background2", "divider"],
+  divider: ["divider"],
+  background3: ["background3", "simulator"],
+  simulator: ["simulator"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  background1: "div";
+  navbar: typeof Navbar;
+  concentrezVousSurLessentielAchyleSoccuperaDuReste: "div";
+  background2: "div";
+  divider: typeof Divider;
+  background3: "div";
+  simulator: typeof Simulator;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -168,6 +963,15 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    background1: makeNodeComponent("background1"),
+    navbar: makeNodeComponent("navbar"),
+    concentrezVousSurLessentielAchyleSoccuperaDuReste: makeNodeComponent(
+      "concentrezVousSurLessentielAchyleSoccuperaDuReste"
+    ),
+    background2: makeNodeComponent("background2"),
+    divider: makeNodeComponent("divider"),
+    background3: makeNodeComponent("background3"),
+    simulator: makeNodeComponent("simulator"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C400%3B0%2C600%3B0%2C700%3B0%2C900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C400%3B0%2C600%3B0%2C700%3B0%2C900&family=Belleza%3Aital%2Cwght%400%2C400&display=swap");
 .root_reset {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -14,6 +14,7 @@
 
 :where(.root_reset) h1,
 :where(.root_reset) .plasmic_default__h1,
+:where(.root_reset) .h1,
 h1:where(.root_reset) {
   color: #000000;
   font-weight: 900;
@@ -24,6 +25,7 @@ h1:where(.root_reset) {
 
 :where(.root_reset) h2,
 :where(.root_reset) .plasmic_default__h2,
+:where(.root_reset) .h2,
 h2:where(.root_reset) {
   color: #000000;
   font-weight: 700;
@@ -34,12 +36,14 @@ h2:where(.root_reset) {
 
 :where(.root_reset) a,
 :where(.root_reset) .plasmic_default__a,
+:where(.root_reset) .a,
 a:where(.root_reset) {
   color: #3291ff;
 }
 
 :where(.root_reset) h3,
 :where(.root_reset) .plasmic_default__h3,
+:where(.root_reset) .h3,
 h3:where(.root_reset) {
   color: #000000;
   font-weight: 600;
@@ -50,6 +54,7 @@ h3:where(.root_reset) {
 
 :where(.root_reset) h4,
 :where(.root_reset) .plasmic_default__h4,
+:where(.root_reset) .h4,
 h4:where(.root_reset) {
   color: #000000;
   font-weight: 600;

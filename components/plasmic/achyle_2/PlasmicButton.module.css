@@ -1,0 +1,24 @@
+.root {
+  display: inline-flex;
+  flex-direction: row;
+  position: relative;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  background: #66a699;
+  border-radius: 25px;
+  padding: 14px 26px;
+}
+.freeBox {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+}
+.slotTargetChildren {
+  color: #ebf0f2 /* plasmic-token: 0fyKU1aD3 */;
+}

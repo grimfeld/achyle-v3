@@ -40,12 +40,280 @@
           "cssFilePath": "plasmic/achyle_2/PlasmicHomepage.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "KxQ-6Oe5Yl",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicButton.tsx",
+          "importSpec": {
+            "modulePath": "Button.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "TR4BFzjq4x",
+          "name": "Navbar",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicNavbar.tsx",
+          "importSpec": {
+            "modulePath": "Navbar.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicNavbar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "iLkYtMJ5YQ",
+          "name": "Heading",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicHeading.tsx",
+          "importSpec": {
+            "modulePath": "Heading.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicHeading.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "ds4yKdokUn",
+          "name": "Paragraph",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicParagraph.tsx",
+          "importSpec": {
+            "modulePath": "Paragraph.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicParagraph.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "KMaiExXsEA",
+          "name": "Cta",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicCta.tsx",
+          "importSpec": {
+            "modulePath": "Cta.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicCta.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "UoBPAHd4v2",
+          "name": "Input",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicInput.tsx",
+          "importSpec": {
+            "modulePath": "Input.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "XtbwwYm6Vx",
+          "name": "Slider",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicSlider.tsx",
+          "importSpec": {
+            "modulePath": "Slider.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicSlider.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "-MewncD7Wg3",
+          "name": "Section",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicSection.tsx",
+          "importSpec": {
+            "modulePath": "Section.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "lXfsMEnWoU",
+          "name": "Pill",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicPill.tsx",
+          "importSpec": {
+            "modulePath": "Pill.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicPill.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "79e3ncUiiG",
+          "name": "Divider",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicDivider.tsx",
+          "importSpec": {
+            "modulePath": "Divider.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicDivider.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "hVvONWSKSkN",
+          "name": "Rectangle",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicRectangle.tsx",
+          "importSpec": {
+            "modulePath": "Rectangle.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicRectangle.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "xUitMmxl0F",
+          "name": "ListItem",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicListItem.tsx",
+          "importSpec": {
+            "modulePath": "ListItem.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicListItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "jYoV5jA9Oa",
+          "name": "Range",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicRange.tsx",
+          "importSpec": {
+            "modulePath": "Range.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicRange.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "HMhxayluTN",
+          "name": "Simulator",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicSimulator.tsx",
+          "importSpec": {
+            "modulePath": "Simulator.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicSimulator.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
+      "icons": [
+        {
+          "id": "fMAKgq5kC",
+          "name": "ContractIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon__Contract.tsx"
+        },
+        {
+          "id": "uWFrTHISq",
+          "name": "TimeIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon__Time.tsx"
+        },
+        {
+          "id": "p1duHFCHl",
+          "name": "CalendarIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon__Calendar.tsx"
+        },
+        {
+          "id": "O8HA5RKUW",
+          "name": "CheckIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon__Check.tsx"
+        },
+        {
+          "id": "3A6Fw1dQU",
+          "name": "CreditCardIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon__CreditCard.tsx"
+        },
+        {
+          "id": "eE8sP416E",
+          "name": "ListStyleGreenIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon__ListStyleGreen.tsx"
+        },
+        {
+          "id": "zxnLx8ips",
+          "name": "ListStyleWhiteIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon__ListStyleWhite.tsx"
+        }
+      ],
+      "images": [
+        {
+          "id": "xz2gRyXZK",
+          "name": "logo white",
+          "filePath": "../public/plasmic/achyle_2/images/logoWhite.png"
+        },
+        {
+          "id": "Ud4i-QwEl",
+          "name": "Hero",
+          "filePath": "../public/plasmic/achyle_2/images/hero.png"
+        },
+        {
+          "id": "3OnWghqLS",
+          "name": "fonction-juridique",
+          "filePath": "../public/plasmic/achyle_2/images/fonctionJuridique.png"
+        },
+        {
+          "id": "F_Jj8dHbg",
+          "name": "Needs",
+          "filePath": "../public/plasmic/achyle_2/images/needs.png"
+        },
+        {
+          "id": "g5NBYZy2W",
+          "name": "Form",
+          "filePath": "../public/plasmic/achyle_2/images/form.png"
+        },
+        {
+          "id": "usX8Yg7pG",
+          "name": "Docs",
+          "filePath": "../public/plasmic/achyle_2/images/docs.png"
+        }
+      ],
+      "indirect": false,
+      "codeComponents": [
+        {
+          "id": "XG5PDl0Ndj",
+          "name": "InputRange",
+          "componentImportPath": "./components/InputRange"
+        }
+      ]
+    },
+    {
+      "projectId": "cZvgi7fsWKqWqy5TXtQdgQ",
+      "projectApiToken": "fleidLIede6iS5iGFAXXMCyDaCHNOKAHcED0WOI8tJoNeU8fERMWokEMKKqGNtZrDIz6FAZIoHjZSdXA",
+      "projectName": "Achyle",
+      "version": "2.1.0",
+      "cssFilePath": "",
+      "components": [],
       "icons": [],
       "images": [],
-      "indirect": false,
-      "codeComponents": []
+      "indirect": true,
+      "codeComponents": [],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {
@@ -54,6 +322,12 @@
         "id": "5WudJONqca",
         "name": "Screen",
         "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "contextFilePath": "plasmic/achyle_2/PlasmicGlobalVariant__Screen.tsx"
+      },
+      {
+        "id": "8D6YF60RGqb",
+        "name": "Screen",
+        "projectId": "cZvgi7fsWKqWqy5TXtQdgQ",
         "contextFilePath": "plasmic/achyle_2/PlasmicGlobalVariant__Screen.tsx"
       }
     ]

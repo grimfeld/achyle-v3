@@ -1,0 +1,11 @@
+.root {
+  width: 96%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+  position: relative;
+  padding: 0px;
+}

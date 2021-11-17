@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+}
+.freeBox {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+}
+.slotTargetChildren {
+  color: #ebf0f2bf /* plasmic-token: PWLUNeUui */;
+  font-family: Inter /* plasmic-token: Mnz7nYzeb */;
+  font-size: 16px /* plasmic-token: F3aqJ_4sR */;
+}
+.slotTargetChildren__dark {
+  color: #121a29bf /* plasmic-token: 0ns3OrR_c */;
+}
