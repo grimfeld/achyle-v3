@@ -66,3 +66,19 @@
   > img {
   margin-top: 24px;
 }
+.svg {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  width: 175px;
+  height: 175px;
+  color: #66a699 /* plasmic-token: WOaOUZL1h */;
+  left: auto;
+  top: -58px;
+  right: -69px;
+  flex-shrink: 0;
+  display: none;
+}
+.svg__starVariant {
+  display: block;
+}

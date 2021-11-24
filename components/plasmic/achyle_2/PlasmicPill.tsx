@@ -42,12 +42,24 @@ import * as projectcss from "./plasmic_achyle_2.module.css"; // plasmic-import: 
 import * as sty from "./PlasmicPill.module.css"; // plasmic-import: lXfsMEnWoU/css
 
 import ContractIcon from "./icons/PlasmicIcon__Contract"; // plasmic-import: fMAKgq5kC/icon
+import DoubleCirclesIcon from "./icons/PlasmicIcon__DoubleCircles"; // plasmic-import: GTTxKOnNw/icon
+import _9BranchesStarIcon from "./icons/PlasmicIcon___9BranchesStar"; // plasmic-import: J71R-Vsqa/icon
 
-export type PlasmicPill__VariantMembers = {};
+export type PlasmicPill__VariantMembers = {
+  circleVariant: "circleVariant";
+  starVariant: "starVariant";
+};
 
-export type PlasmicPill__VariantsArgs = {};
+export type PlasmicPill__VariantsArgs = {
+  circleVariant?: SingleBooleanChoiceArg<"circleVariant">;
+  starVariant?: SingleBooleanChoiceArg<"starVariant">;
+};
+
 type VariantPropType = keyof PlasmicPill__VariantsArgs;
-export const PlasmicPill__VariantProps = new Array<VariantPropType>();
+export const PlasmicPill__VariantProps = new Array<VariantPropType>(
+  "circleVariant",
+  "starVariant"
+);
 
 export type PlasmicPill__ArgsType = {
   icon?: React.ReactNode;
@@ -64,12 +76,15 @@ export const PlasmicPill__ArgProps = new Array<ArgPropType>(
 
 export type PlasmicPill__OverridesType = {
   root?: p.Flex<"div">;
+  freeBox?: p.Flex<"div">;
 };
 
 export interface DefaultPillProps {
   icon?: React.ReactNode;
   title?: React.ReactNode;
   text?: React.ReactNode;
+  circleVariant?: SingleBooleanChoiceArg<"circleVariant">;
+  starVariant?: SingleBooleanChoiceArg<"starVariant">;
   className?: string;
 }
 
@@ -92,69 +107,122 @@ function PlasmicPill__RenderFunc(props: {
         defaultcss.all,
         projectcss.all,
         projectcss.root_reset,
-        sty.root
+        sty.root,
+        {
+          [sty.root__circleVariant]: hasVariant(
+            variants,
+            "circleVariant",
+            "circleVariant"
+          )
+        }
       )}
     >
-      {p.renderPlasmicSlot({
-        defaultContents: (
-          <ContractIcon
-            className={classNames(
-              defaultcss.all,
-              projectcss.all,
-              sty.svg___6On80
-            )}
-            role={"img"}
-          />
-        ),
+      <div
+        data-plasmic-name={"freeBox"}
+        data-plasmic-override={overrides.freeBox}
+        className={classNames(defaultcss.all, projectcss.all, sty.freeBox, {
+          [sty.freeBox__circleVariant]: hasVariant(
+            variants,
+            "circleVariant",
+            "circleVariant"
+          )
+        })}
+      >
+        {p.renderPlasmicSlot({
+          defaultContents: (
+            <ContractIcon
+              className={classNames(
+                defaultcss.all,
+                projectcss.all,
+                sty.svg___6On80
+              )}
+              role={"img"}
+            />
+          ),
 
-        value: args.icon
-      })}
+          value: args.icon
+        })}
 
-      {p.renderPlasmicSlot({
-        defaultContents: (
-          <Heading
-            className={classNames("__wab_instance", sty.heading__cfwWt)}
-            content={
-              <div
-                className={classNames(
-                  defaultcss.all,
-                  projectcss.all,
-                  defaultcss.__wab_text,
-                  sty.text___9QpDz
-                )}
-              >
-                {"Heading"}
-              </div>
+        {p.renderPlasmicSlot({
+          defaultContents: (
+            <Heading
+              className={classNames("__wab_instance", sty.heading__cfwWt)}
+              content={
+                <div
+                  className={classNames(
+                    defaultcss.all,
+                    projectcss.all,
+                    defaultcss.__wab_text,
+                    sty.text___9QpDz
+                  )}
+                >
+                  {"Heading"}
+                </div>
+              }
+              dark={"dark" as const}
+            />
+          ),
+
+          value: args.title
+        })}
+
+        {p.renderPlasmicSlot({
+          defaultContents: (
+            <Paragraph
+              className={classNames("__wab_instance", sty.paragraph__ocHSe)}
+              dark={"dark" as const}
+            />
+          ),
+
+          value: args.text
+        })}
+      </div>
+
+      {(
+        hasVariant(variants, "circleVariant", "circleVariant") ? true : true
+      ) ? (
+        <DoubleCirclesIcon
+          className={classNames(
+            defaultcss.all,
+            projectcss.all,
+            sty.svg___9VFia,
+            {
+              [sty.svg__circleVariant___9VFiadHxsA]: hasVariant(
+                variants,
+                "circleVariant",
+                "circleVariant"
+              )
             }
-            dark={"dark" as const}
-          />
-        ),
-
-        value: args.title
-      })}
-
-      {p.renderPlasmicSlot({
-        defaultContents: (
-          <Paragraph
-            className={classNames("__wab_instance", sty.paragraph__ocHSe)}
-            dark={"dark" as const}
-          />
-        ),
-
-        value: args.text
-      })}
+          )}
+          role={"img"}
+        />
+      ) : null}
+      {(hasVariant(variants, "starVariant", "starVariant") ? true : true) ? (
+        <_9BranchesStarIcon
+          className={classNames(defaultcss.all, projectcss.all, sty.svg__uoYd, {
+            [sty.svg__starVariant__uoYdTctkj]: hasVariant(
+              variants,
+              "starVariant",
+              "starVariant"
+            )
+          })}
+          role={"img"}
+        />
+      ) : null}
     </div>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: ["root", "freeBox"],
+  freeBox: ["freeBox"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  freeBox: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -218,6 +286,7 @@ export const PlasmicPill = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    freeBox: makeNodeComponent("freeBox"),
 
     // Metadata about props expected for PlasmicPill
     internalVariantProps: PlasmicPill__VariantProps,

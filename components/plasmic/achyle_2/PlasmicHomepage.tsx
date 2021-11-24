@@ -42,7 +42,10 @@ import Pill from "../../Pill"; // plasmic-import: lXfsMEnWoU/component
 import ListItem from "../../ListItem"; // plasmic-import: xUitMmxl0F/component
 import Divider from "../../Divider"; // plasmic-import: 79e3ncUiiG/component
 import Rectangle from "../../Rectangle"; // plasmic-import: hVvONWSKSkN/component
-import Simulator from "../../Simulator"; // plasmic-import: HMhxayluTN/component
+import { Simulator } from "../../Simulator"; // plasmic-import: AnL57GQcOM/codeComponent
+import FooterListItem from "../../FooterListItem"; // plasmic-import: rmbHJKVaT7/component
+import { Form } from "../../Form"; // plasmic-import: j4VGSv_Ccx/codeComponent
+import FooterLink from "../../FooterLink"; // plasmic-import: kdjInOKPb0/component
 
 import { useScreenVariants } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: 5WudJONqca/globalVariant
 
@@ -51,11 +54,15 @@ import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-i
 import * as projectcss from "./plasmic_achyle_2.module.css"; // plasmic-import: 9mqNJRrUCJdF1Qi4kUEnK1/projectcss
 import * as sty from "./PlasmicHomepage.module.css"; // plasmic-import: kyoneW7tS_/css
 
+import _8BranchesStarIcon from "./icons/PlasmicIcon___8BranchesStar"; // plasmic-import: ut5tcmzu6/icon
 import ContractIcon from "./icons/PlasmicIcon__Contract"; // plasmic-import: fMAKgq5kC/icon
 import TimeIcon from "./icons/PlasmicIcon__Time"; // plasmic-import: uWFrTHISq/icon
 import CalendarIcon from "./icons/PlasmicIcon__Calendar"; // plasmic-import: p1duHFCHl/icon
 import CheckIcon from "./icons/PlasmicIcon__Check"; // plasmic-import: O8HA5RKUW/icon
 import CreditCardIcon from "./icons/PlasmicIcon__CreditCard"; // plasmic-import: 3A6Fw1dQU/icon
+import PhoneIcon from "./icons/PlasmicIcon__Phone"; // plasmic-import: OZ16LYpjm/icon
+import PlayIcon from "./icons/PlasmicIcon__Play"; // plasmic-import: Tj9Hf2bUy/icon
+import FlagIcon from "./icons/PlasmicIcon__Flag"; // plasmic-import: Y6M1qj5AP/icon
 
 export type PlasmicHomepage__VariantMembers = {};
 
@@ -71,11 +78,14 @@ export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
   background1?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
+  button?: p.Flex<typeof Button>;
   concentrezVousSurLessentielAchyleSoccuperaDuReste?: p.Flex<"div">;
   background2?: p.Flex<"div">;
-  divider?: p.Flex<typeof Divider>;
   background3?: p.Flex<"div">;
   simulator?: p.Flex<typeof Simulator>;
+  background4?: p.Flex<"div">;
+  footer?: p.Flex<typeof Section>;
+  form?: p.Flex<typeof Form>;
 };
 
 export interface DefaultHomepageProps {
@@ -138,6 +148,30 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-name={"navbar"}
                 data-plasmic-override={overrides.navbar}
                 className={classNames("__wab_instance", sty.navbar)}
+                slot={
+                  <React.Fragment>
+                    <div
+                      className={classNames(
+                        defaultcss.all,
+                        projectcss.all,
+                        defaultcss.__wab_text,
+                        sty.text__oiRe6
+                      )}
+                    >
+                      {"Contact"}
+                    </div>
+
+                    <Button
+                      data-plasmic-name={"button"}
+                      data-plasmic-override={overrides.button}
+                      className={classNames("__wab_instance", sty.button)}
+                    >
+                      {hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "Démo"
+                        : "Demander une démo"}
+                    </Button>
+                  </React.Fragment>
+                }
               />
 
               <div
@@ -210,6 +244,23 @@ function PlasmicHomepage__RenderFunc(props: {
                   </Paragraph>
                 </div>
 
+                {(
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? true
+                    : hasVariant(globalVariants, "screen", "tablet")
+                    ? true
+                    : true
+                ) ? (
+                  <_8BranchesStarIcon
+                    className={classNames(
+                      defaultcss.all,
+                      projectcss.all,
+                      sty.svg__kzng
+                    )}
+                    role={"img"}
+                  />
+                ) : null}
+
                 <p.PlasmicImg
                   alt={""}
                   className={classNames(sty.img__lIbGa)}
@@ -267,6 +318,7 @@ function PlasmicHomepage__RenderFunc(props: {
               )}
             >
               <Pill
+                circleVariant={"circleVariant" as const}
                 className={classNames("__wab_instance", sty.pill__ylIw)}
                 text={
                   <Paragraph
@@ -400,6 +452,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     role={"img"}
                   />
                 }
+                starVariant={"starVariant" as const}
                 text={
                   <Paragraph
                     className={classNames(
@@ -552,9 +605,7 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
 
               <Divider
-                data-plasmic-name={"divider"}
-                data-plasmic-override={overrides.divider}
-                className={classNames("__wab_instance", sty.divider)}
+                className={classNames("__wab_instance", sty.divider__lxWc)}
               />
 
               <div
@@ -586,7 +637,16 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames("__wab_instance", sty.paragraph__lbkqq)}
               dark={"dark" as const}
             >
-              {"Comment ça marche ? C’est très simple !"}
+              <div
+                className={classNames(
+                  defaultcss.all,
+                  projectcss.all,
+                  defaultcss.__wab_text,
+                  sty.text__tRby
+                )}
+              >
+                {"Comment ça marche ? C’est très simple !"}
+              </div>
             </Paragraph>
 
             <p.Stack
@@ -796,6 +856,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     </Paragraph>
                   </ListItem>
                 }
+                starVariant={"starVariant" as const}
                 title={
                   <Heading
                     className={classNames(
@@ -858,7 +919,402 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-name={"simulator"}
                 data-plasmic-override={overrides.simulator}
                 className={classNames("__wab_instance", sty.simulator)}
+                icon1={
+                  <TimeIcon
+                    className={classNames(
+                      defaultcss.all,
+                      projectcss.all,
+                      sty.svg__iqmia
+                    )}
+                    role={"img"}
+                  />
+                }
+                icon2={
+                  <CalendarIcon
+                    className={classNames(
+                      defaultcss.all,
+                      projectcss.all,
+                      sty.svg__n3Yos
+                    )}
+                    role={"img"}
+                  />
+                }
+                slot1={
+                  <ListItem
+                    className={classNames(
+                      "__wab_instance",
+                      sty.listItem__pJwVw
+                    )}
+                  >
+                    <Paragraph
+                      className={classNames(
+                        "__wab_instance",
+                        sty.paragraph__shkru
+                      )}
+                      dark={"dark" as const}
+                    >
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text___80MEb
+                        )}
+                      >
+                        {
+                          "Combien de contrats récurrents rédigez-vous par mois ?"
+                        }
+                      </div>
+                    </Paragraph>
+                  </ListItem>
+                }
+                slot2={
+                  <ListItem
+                    className={classNames(
+                      "__wab_instance",
+                      sty.listItem__p7FMk
+                    )}
+                  >
+                    <Paragraph
+                      className={classNames(
+                        "__wab_instance",
+                        sty.paragraph__wfCi4
+                      )}
+                      dark={"dark" as const}
+                    >
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text__xB8Oq
+                        )}
+                      >
+                        {
+                          "Sans Achyle, combien de temps vous faut-il pour rédiger ces contrats ?"
+                        }
+                      </div>
+                    </Paragraph>
+                  </ListItem>
+                }
+                slot3={
+                  <ListItem
+                    className={classNames(
+                      "__wab_instance",
+                      sty.listItem__rMpFd
+                    )}
+                  >
+                    <Paragraph
+                      className={classNames(
+                        "__wab_instance",
+                        sty.paragraph__hnWyI
+                      )}
+                      dark={"dark" as const}
+                    >
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text__eO8E
+                        )}
+                      >
+                        {"Nombre d'heures gagnées avec Achyle"}
+                      </div>
+                    </Paragraph>
+                  </ListItem>
+                }
               />
+            </Section>
+          </div>
+
+          {true ? (
+            <Section
+              className={classNames("__wab_instance", sty.section___9JzuO)}
+            >
+              {true ? (
+                <Heading
+                  className={classNames("__wab_instance", sty.heading__dYoMb)}
+                  content={
+                    <div
+                      className={classNames(
+                        defaultcss.all,
+                        projectcss.all,
+                        defaultcss.__wab_text,
+                        sty.text__o5CQu
+                      )}
+                    >
+                      {"Ils utilisent Achyle au quotidien"}
+                    </div>
+                  }
+                  dark={"dark" as const}
+                />
+              ) : null}
+            </Section>
+          ) : null}
+
+          <div
+            data-plasmic-name={"background4"}
+            data-plasmic-override={overrides.background4}
+            className={classNames(
+              defaultcss.all,
+              projectcss.all,
+              sty.background4
+            )}
+          >
+            <Section
+              data-plasmic-name={"footer"}
+              data-plasmic-override={overrides.footer}
+              className={classNames("__wab_instance", sty.footer)}
+            >
+              <div
+                className={classNames(
+                  defaultcss.all,
+                  projectcss.all,
+                  sty.freeBox__lBSi9
+                )}
+              >
+                <div
+                  className={classNames(
+                    defaultcss.all,
+                    projectcss.all,
+                    sty.freeBox__ozbor
+                  )}
+                >
+                  <Heading
+                    className={classNames("__wab_instance", sty.heading__sqz38)}
+                    content={"Réservez votre démo !"}
+                    dark={"dark" as const}
+                  />
+
+                  <Paragraph
+                    className={classNames(
+                      "__wab_instance",
+                      sty.paragraph__fHI0
+                    )}
+                    dark={"dark" as const}
+                  >
+                    <div
+                      className={classNames(
+                        defaultcss.all,
+                        projectcss.all,
+                        defaultcss.__wab_text,
+                        sty.text__mTbs
+                      )}
+                    >
+                      {
+                        "Achyle est la solution qui vous fait gagner du temps et vous rend\nplus efficace"
+                      }
+                    </div>
+                  </Paragraph>
+
+                  <div
+                    className={classNames(
+                      defaultcss.all,
+                      projectcss.all,
+                      sty.freeBox___3CDVn
+                    )}
+                  >
+                    <FooterListItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.footerListItem__jjtfc
+                      )}
+                      icon={
+                        <PhoneIcon
+                          className={classNames(
+                            defaultcss.all,
+                            projectcss.all,
+                            sty.svg___3IBtj
+                          )}
+                          role={"img"}
+                        />
+                      }
+                      title={
+                        <div
+                          className={classNames(
+                            defaultcss.all,
+                            projectcss.all,
+                            defaultcss.__wab_text,
+                            sty.text__mjSA
+                          )}
+                        >
+                          {
+                            "Nous vous rappelons dans l'heure (entre 8h30 et 19h)."
+                          }
+                        </div>
+                      }
+                    >
+                      {
+                        "Pour mieux comprendre vos besoins et répondre à vos questions."
+                      }
+                    </FooterListItem>
+
+                    <FooterListItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.footerListItem___4Famy
+                      )}
+                      icon={
+                        <PlayIcon
+                          className={classNames(
+                            defaultcss.all,
+                            projectcss.all,
+                            sty.svg___1JliF
+                          )}
+                          role={"img"}
+                        />
+                      }
+                      title={
+                        <div
+                          className={classNames(
+                            defaultcss.all,
+                            projectcss.all,
+                            defaultcss.__wab_text,
+                            sty.text__m0ApS
+                          )}
+                        >
+                          {"Nous organisons une démonstration."}
+                        </div>
+                      }
+                    >
+                      {
+                        "Pour présenter Achyle et les fonctionnalités qui vont vous aider."
+                      }
+                    </FooterListItem>
+
+                    <FooterListItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.footerListItem__fOsI0
+                      )}
+                      icon={
+                        <FlagIcon
+                          className={classNames(
+                            defaultcss.all,
+                            projectcss.all,
+                            sty.svg__sc5Wf
+                          )}
+                          role={"img"}
+                        />
+                      }
+                      title={
+                        <div
+                          className={classNames(
+                            defaultcss.all,
+                            projectcss.all,
+                            defaultcss.__wab_text,
+                            sty.text__mWuYt
+                          )}
+                        >
+                          {"Nous vous accompagnons étape par étape."}
+                        </div>
+                      }
+                    >
+                      {
+                        "Pour la prise en main, la formation des utilisateurs et au quotidien."
+                      }
+                    </FooterListItem>
+                  </div>
+                </div>
+
+                <div
+                  className={classNames(
+                    defaultcss.all,
+                    projectcss.all,
+                    sty.freeBox__uemJk
+                  )}
+                >
+                  <Form
+                    data-plasmic-name={"form"}
+                    data-plasmic-override={overrides.form}
+                    className={classNames("__wab_instance", sty.form)}
+                  />
+                </div>
+              </div>
+
+              <Divider
+                className={classNames("__wab_instance", sty.divider__j0Ovn)}
+              />
+
+              <div
+                className={classNames(
+                  defaultcss.all,
+                  projectcss.all,
+                  sty.freeBox__o0S
+                )}
+              >
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__yXi2A)}
+                  displayHeight={"48px" as const}
+                  displayMaxHeight={"none" as const}
+                  displayMaxWidth={"100%" as const}
+                  displayMinHeight={"0" as const}
+                  displayMinWidth={"0" as const}
+                  displayWidth={"142px" as const}
+                  loading={"lazy" as const}
+                  src={{
+                    src: "/plasmic/achyle_2/images/logoBlack.png",
+                    fullWidth: 865,
+                    fullHeight: 292,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div
+                  className={classNames(
+                    defaultcss.all,
+                    projectcss.all,
+                    sty.freeBox__wXsno
+                  )}
+                >
+                  <Paragraph
+                    className={classNames(
+                      "__wab_instance",
+                      sty.paragraph__h2Xu
+                    )}
+                    dark={"dark" as const}
+                  >
+                    {"La rédaction de vos contrats simple et automatisée"}
+                  </Paragraph>
+
+                  <div
+                    className={classNames(
+                      defaultcss.all,
+                      projectcss.all,
+                      sty.freeBox__uqFdD
+                    )}
+                  >
+                    <FooterLink
+                      className={classNames(
+                        "__wab_instance",
+                        sty.footerLink___2U0D8
+                      )}
+                    >
+                      {"Cookies"}
+                    </FooterLink>
+
+                    <FooterLink
+                      className={classNames(
+                        "__wab_instance",
+                        sty.footerLink__fLeor
+                      )}
+                    >
+                      {"Mentions légales"}
+                    </FooterLink>
+
+                    <FooterLink
+                      className={classNames(
+                        "__wab_instance",
+                        sty.footerLink__gv6Q
+                      )}
+                    >
+                      {"Politique de Confidentialité"}
+                    </FooterLink>
+                  </div>
+                </div>
+              </div>
             </Section>
           </div>
         </p.Stack>
@@ -872,21 +1328,27 @@ const PlasmicDescendants = {
     "root",
     "background1",
     "navbar",
+    "button",
     "concentrezVousSurLessentielAchyleSoccuperaDuReste",
     "background2",
-    "divider",
     "background3",
-    "simulator"
+    "simulator",
+    "background4",
+    "footer",
+    "form"
   ],
-  background1: ["background1", "navbar"],
-  navbar: ["navbar"],
+  background1: ["background1", "navbar", "button"],
+  navbar: ["navbar", "button"],
+  button: ["button"],
   concentrezVousSurLessentielAchyleSoccuperaDuReste: [
     "concentrezVousSurLessentielAchyleSoccuperaDuReste"
   ],
-  background2: ["background2", "divider"],
-  divider: ["divider"],
+  background2: ["background2"],
   background3: ["background3", "simulator"],
-  simulator: ["simulator"]
+  simulator: ["simulator"],
+  background4: ["background4", "footer", "form"],
+  footer: ["footer", "form"],
+  form: ["form"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -895,11 +1357,14 @@ type NodeDefaultElementType = {
   root: "div";
   background1: "div";
   navbar: typeof Navbar;
+  button: typeof Button;
   concentrezVousSurLessentielAchyleSoccuperaDuReste: "div";
   background2: "div";
-  divider: typeof Divider;
   background3: "div";
   simulator: typeof Simulator;
+  background4: "div";
+  footer: typeof Section;
+  form: typeof Form;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -965,13 +1430,16 @@ export const PlasmicHomepage = Object.assign(
     // Helper components rendering sub-elements
     background1: makeNodeComponent("background1"),
     navbar: makeNodeComponent("navbar"),
+    button: makeNodeComponent("button"),
     concentrezVousSurLessentielAchyleSoccuperaDuReste: makeNodeComponent(
       "concentrezVousSurLessentielAchyleSoccuperaDuReste"
     ),
     background2: makeNodeComponent("background2"),
-    divider: makeNodeComponent("divider"),
     background3: makeNodeComponent("background3"),
     simulator: makeNodeComponent("simulator"),
+    background4: makeNodeComponent("background4"),
+    footer: makeNodeComponent("footer"),
+    form: makeNodeComponent("form"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

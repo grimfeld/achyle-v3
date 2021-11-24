@@ -1,6 +1,16 @@
 {
   "props": [
     {
+      "name": "Bone",
+      "type": "color",
+      "value": "#E5DEC7",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "bxn9KSf8a"
+      }
+    },
+    {
       "name": "CTA Background",
       "type": "color",
       "value": "#EBF0F226",

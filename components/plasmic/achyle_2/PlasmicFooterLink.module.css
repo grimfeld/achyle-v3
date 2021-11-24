@@ -1,0 +1,23 @@
+.root {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.freeBox {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+}
+.slotTargetChildren {
+  font-size: 13px /* plasmic-token: Ny-FUqhlT */;
+  color: #2b4f57bf;
+}

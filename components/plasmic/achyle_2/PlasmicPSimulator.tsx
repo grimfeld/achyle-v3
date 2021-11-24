@@ -42,47 +42,47 @@ import Heading from "../../Heading"; // plasmic-import: iLkYtMJ5YQ/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-import: global/defaultcss
 import * as projectcss from "./plasmic_achyle_2.module.css"; // plasmic-import: 9mqNJRrUCJdF1Qi4kUEnK1/projectcss
-import * as sty from "./PlasmicSimulator.module.css"; // plasmic-import: HMhxayluTN/css
+import * as sty from "./PlasmicPSimulator.module.css"; // plasmic-import: HMhxayluTN/css
 
 import TimeIcon from "./icons/PlasmicIcon__Time"; // plasmic-import: uWFrTHISq/icon
 import CalendarIcon from "./icons/PlasmicIcon__Calendar"; // plasmic-import: p1duHFCHl/icon
 
-export type PlasmicSimulator__VariantMembers = {};
+export type PlasmicPSimulator__VariantMembers = {};
 
-export type PlasmicSimulator__VariantsArgs = {};
-type VariantPropType = keyof PlasmicSimulator__VariantsArgs;
-export const PlasmicSimulator__VariantProps = new Array<VariantPropType>();
+export type PlasmicPSimulator__VariantsArgs = {};
+type VariantPropType = keyof PlasmicPSimulator__VariantsArgs;
+export const PlasmicPSimulator__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicSimulator__ArgsType = {
+export type PlasmicPSimulator__ArgsType = {
   hoursPerMonth?: React.ReactNode;
   hoursPerYear?: React.ReactNode;
   children?: React.ReactNode;
 };
 
-type ArgPropType = keyof PlasmicSimulator__ArgsType;
-export const PlasmicSimulator__ArgProps = new Array<ArgPropType>(
+type ArgPropType = keyof PlasmicPSimulator__ArgsType;
+export const PlasmicPSimulator__ArgProps = new Array<ArgPropType>(
   "hoursPerMonth",
   "hoursPerYear",
   "children"
 );
 
-export type PlasmicSimulator__OverridesType = {
+export type PlasmicPSimulator__OverridesType = {
   root?: p.Flex<"div">;
   divider?: p.Flex<typeof Divider>;
 };
 
-export interface DefaultSimulatorProps {
+export interface DefaultPSimulatorProps {
   hoursPerMonth?: React.ReactNode;
   hoursPerYear?: React.ReactNode;
   children?: React.ReactNode;
   className?: string;
 }
 
-function PlasmicSimulator__RenderFunc(props: {
-  variants: PlasmicSimulator__VariantsArgs;
-  args: PlasmicSimulator__ArgsType;
-  overrides: PlasmicSimulator__OverridesType;
-  dataFetches?: PlasmicSimulator__Fetches;
+function PlasmicPSimulator__RenderFunc(props: {
+  variants: PlasmicPSimulator__VariantsArgs;
+  args: PlasmicPSimulator__ArgsType;
+  overrides: PlasmicPSimulator__OverridesType;
+  dataFetches?: PlasmicPSimulator__Fetches;
   forNode?: string;
 }) {
   const { variants, args, overrides, forNode, dataFetches } = props;
@@ -322,19 +322,19 @@ type NodeDefaultElementType = {
 
 type ReservedPropsType = "variants" | "args" | "overrides";
 type NodeOverridesType<T extends NodeNameType> = Pick<
-  PlasmicSimulator__OverridesType,
+  PlasmicPSimulator__OverridesType,
   DescendantsType<T>
 >;
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {
-    variants?: PlasmicSimulator__VariantsArgs;
-    args?: PlasmicSimulator__ArgsType;
+    variants?: PlasmicPSimulator__VariantsArgs;
+    args?: PlasmicPSimulator__ArgsType;
     overrides?: NodeOverridesType<T>;
-    dataFetches?: PlasmicSimulator__Fetches;
-  } & Omit<PlasmicSimulator__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
+    dataFetches?: PlasmicPSimulator__Fetches;
+  } & Omit<PlasmicPSimulator__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
     // Specify args directly as props
-    Omit<PlasmicSimulator__ArgsType, ReservedPropsType> &
+    Omit<PlasmicPSimulator__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props
     Omit<
       NodeOverridesType<T>,
@@ -354,13 +354,13 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
     const { variants, args, overrides } = deriveRenderOpts(props, {
       name: nodeName,
       descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicSimulator__ArgProps,
-      internalVariantPropNames: PlasmicSimulator__VariantProps
+      internalArgPropNames: PlasmicPSimulator__ArgProps,
+      internalVariantPropNames: PlasmicPSimulator__VariantProps
     });
 
     const { dataFetches } = props;
 
-    return PlasmicSimulator__RenderFunc({
+    return PlasmicPSimulator__RenderFunc({
       variants,
       args,
       overrides,
@@ -369,25 +369,25 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
     });
   };
   if (nodeName === "root") {
-    func.displayName = "PlasmicSimulator";
+    func.displayName = "PlasmicPSimulator";
   } else {
-    func.displayName = `PlasmicSimulator.${nodeName}`;
+    func.displayName = `PlasmicPSimulator.${nodeName}`;
   }
   return func;
 }
 
-export const PlasmicSimulator = Object.assign(
-  // Top-level PlasmicSimulator renders the root element
+export const PlasmicPSimulator = Object.assign(
+  // Top-level PlasmicPSimulator renders the root element
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
     divider: makeNodeComponent("divider"),
 
-    // Metadata about props expected for PlasmicSimulator
-    internalVariantProps: PlasmicSimulator__VariantProps,
-    internalArgProps: PlasmicSimulator__ArgProps
+    // Metadata about props expected for PlasmicPSimulator
+    internalVariantProps: PlasmicPSimulator__VariantProps,
+    internalArgProps: PlasmicPSimulator__ArgProps
   }
 );
 
-export default PlasmicSimulator;
+export default PlasmicPSimulator;
 /* prettier-ignore-end */

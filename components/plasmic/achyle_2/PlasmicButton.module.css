@@ -12,12 +12,11 @@
 }
 .freeBox {
   position: relative;
-  width: 100%;
+  width: auto;
   height: auto;
   max-width: 800px;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
-  min-width: 0;
 }
 .slotTargetChildren {
   color: #ebf0f2 /* plasmic-token: 0fyKU1aD3 */;

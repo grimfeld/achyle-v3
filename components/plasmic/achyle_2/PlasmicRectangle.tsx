@@ -40,11 +40,20 @@ import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-i
 import * as projectcss from "./plasmic_achyle_2.module.css"; // plasmic-import: 9mqNJRrUCJdF1Qi4kUEnK1/projectcss
 import * as sty from "./PlasmicRectangle.module.css"; // plasmic-import: hVvONWSKSkN/css
 
-export type PlasmicRectangle__VariantMembers = {};
+import _16BranchesStarIcon from "./icons/PlasmicIcon___16BranchesStar"; // plasmic-import: Bnle9jB2l/icon
 
-export type PlasmicRectangle__VariantsArgs = {};
+export type PlasmicRectangle__VariantMembers = {
+  starVariant: "starVariant";
+};
+
+export type PlasmicRectangle__VariantsArgs = {
+  starVariant?: SingleBooleanChoiceArg<"starVariant">;
+};
+
 type VariantPropType = keyof PlasmicRectangle__VariantsArgs;
-export const PlasmicRectangle__VariantProps = new Array<VariantPropType>();
+export const PlasmicRectangle__VariantProps = new Array<VariantPropType>(
+  "starVariant"
+);
 
 export type PlasmicRectangle__ArgsType = {
   image?: React.ReactNode;
@@ -62,12 +71,14 @@ export const PlasmicRectangle__ArgProps = new Array<ArgPropType>(
 export type PlasmicRectangle__OverridesType = {
   root?: p.Flex<"div">;
   freeBox?: p.Flex<"div">;
+  svg?: p.Flex<"svg">;
 };
 
 export interface DefaultRectangleProps {
   image?: React.ReactNode;
   title?: React.ReactNode;
   list?: React.ReactNode;
+  starVariant?: SingleBooleanChoiceArg<"starVariant">;
   className?: string;
 }
 
@@ -152,13 +163,29 @@ function PlasmicRectangle__RenderFunc(props: {
           value: args.list
         })}
       </p.Stack>
+
+      {(hasVariant(variants, "starVariant", "starVariant") ? true : true) ? (
+        <_16BranchesStarIcon
+          data-plasmic-name={"svg"}
+          data-plasmic-override={overrides.svg}
+          className={classNames(defaultcss.all, projectcss.all, sty.svg, {
+            [sty.svg__starVariant]: hasVariant(
+              variants,
+              "starVariant",
+              "starVariant"
+            )
+          })}
+          role={"img"}
+        />
+      ) : null}
     </div>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox"],
-  freeBox: ["freeBox"]
+  root: ["root", "freeBox", "svg"],
+  freeBox: ["freeBox"],
+  svg: ["svg"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -166,6 +193,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   freeBox: "div";
+  svg: "svg";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -230,6 +258,7 @@ export const PlasmicRectangle = Object.assign(
   {
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
+    svg: makeNodeComponent("svg"),
 
     // Metadata about props expected for PlasmicRectangle
     internalVariantProps: PlasmicRectangle__VariantProps,

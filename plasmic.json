@@ -212,14 +212,40 @@
         },
         {
           "id": "HMhxayluTN",
-          "name": "Simulator",
+          "name": "PSimulator",
           "type": "managed",
           "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
-          "renderModuleFilePath": "plasmic/achyle_2/PlasmicSimulator.tsx",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicPSimulator.tsx",
           "importSpec": {
-            "modulePath": "Simulator.tsx"
+            "modulePath": "PSimulator.tsx"
           },
-          "cssFilePath": "plasmic/achyle_2/PlasmicSimulator.module.css",
+          "cssFilePath": "plasmic/achyle_2/PlasmicPSimulator.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "rmbHJKVaT7",
+          "name": "FooterListItem",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicFooterListItem.tsx",
+          "importSpec": {
+            "modulePath": "FooterListItem.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicFooterListItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "kdjInOKPb0",
+          "name": "FooterLink",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle_2/PlasmicFooterLink.tsx",
+          "importSpec": {
+            "modulePath": "FooterLink.tsx"
+          },
+          "cssFilePath": "plasmic/achyle_2/PlasmicFooterLink.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }
@@ -259,6 +285,41 @@
           "id": "zxnLx8ips",
           "name": "ListStyleWhiteIcon",
           "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon__ListStyleWhite.tsx"
+        },
+        {
+          "id": "OZ16LYpjm",
+          "name": "PhoneIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon__Phone.tsx"
+        },
+        {
+          "id": "Tj9Hf2bUy",
+          "name": "PlayIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon__Play.tsx"
+        },
+        {
+          "id": "Y6M1qj5AP",
+          "name": "FlagIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon__Flag.tsx"
+        },
+        {
+          "id": "ut5tcmzu6",
+          "name": "_8BranchesStarIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon___8BranchesStar.tsx"
+        },
+        {
+          "id": "GTTxKOnNw",
+          "name": "DoubleCirclesIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon__DoubleCircles.tsx"
+        },
+        {
+          "id": "J71R-Vsqa",
+          "name": "_9BranchesStarIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon___9BranchesStar.tsx"
+        },
+        {
+          "id": "Bnle9jB2l",
+          "name": "_16BranchesStarIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon___16BranchesStar.tsx"
         }
       ],
       "images": [
@@ -291,6 +352,11 @@
           "id": "usX8Yg7pG",
           "name": "Docs",
           "filePath": "../public/plasmic/achyle_2/images/docs.png"
+        },
+        {
+          "id": "rs3uQzUly",
+          "name": "logo black",
+          "filePath": "../public/plasmic/achyle_2/images/logoBlack.png"
         }
       ],
       "indirect": false,
@@ -299,6 +365,21 @@
           "id": "XG5PDl0Ndj",
           "name": "InputRange",
           "componentImportPath": "./components/InputRange"
+        },
+        {
+          "id": "AnL57GQcOM",
+          "name": "Simulator",
+          "componentImportPath": "./components/Simulator"
+        },
+        {
+          "id": "j4VGSv_Ccx",
+          "name": "Form",
+          "componentImportPath": "./components/Form"
+        },
+        {
+          "id": "Gdv2ygPDlS",
+          "name": "InputText",
+          "componentImportPath": "./components/InputText"
         }
       ]
     },

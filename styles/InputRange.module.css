@@ -1,0 +1,35 @@
+.Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 32px;
+}
+
+.InputWrapper {
+  flex-grow: 1;
+}
+
+.LabelsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LabelsWrapper span {
+  font-size: 13px;
+  color: #b0bfc9;
+}
+
+.CurrentValue {
+  background: #2b4f57;
+  border-radius: 200px;
+  margin-left: 32px;
+  width: 62px;
+  height: 80px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-family: "Belleza";
+  font-size: 36px;
+}
