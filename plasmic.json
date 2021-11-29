@@ -107,19 +107,6 @@
           "componentType": "component"
         },
         {
-          "id": "UoBPAHd4v2",
-          "name": "Input",
-          "type": "managed",
-          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
-          "renderModuleFilePath": "plasmic/achyle_2/PlasmicInput.tsx",
-          "importSpec": {
-            "modulePath": "Input.tsx"
-          },
-          "cssFilePath": "plasmic/achyle_2/PlasmicInput.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "XtbwwYm6Vx",
           "name": "Slider",
           "type": "managed",
@@ -194,32 +181,6 @@
             "modulePath": "ListItem.tsx"
           },
           "cssFilePath": "plasmic/achyle_2/PlasmicListItem.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
-          "id": "jYoV5jA9Oa",
-          "name": "Range",
-          "type": "managed",
-          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
-          "renderModuleFilePath": "plasmic/achyle_2/PlasmicRange.tsx",
-          "importSpec": {
-            "modulePath": "Range.tsx"
-          },
-          "cssFilePath": "plasmic/achyle_2/PlasmicRange.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
-          "id": "HMhxayluTN",
-          "name": "PSimulator",
-          "type": "managed",
-          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
-          "renderModuleFilePath": "plasmic/achyle_2/PlasmicPSimulator.tsx",
-          "importSpec": {
-            "modulePath": "PSimulator.tsx"
-          },
-          "cssFilePath": "plasmic/achyle_2/PlasmicPSimulator.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         },
@@ -320,6 +281,16 @@
           "id": "Bnle9jB2l",
           "name": "_16BranchesStarIcon",
           "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon___16BranchesStar.tsx"
+        },
+        {
+          "id": "vWzO5bS_2",
+          "name": "CloseIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon__Close.tsx"
+        },
+        {
+          "id": "Ul3jjtIQF",
+          "name": "LockIcon",
+          "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon__Lock.tsx"
         }
       ],
       "images": [
@@ -357,6 +328,31 @@
           "id": "rs3uQzUly",
           "name": "logo black",
           "filePath": "../public/plasmic/achyle_2/images/logoBlack.png"
+        },
+        {
+          "id": "3XbwoOxJD",
+          "name": "image",
+          "filePath": "../public/plasmic/achyle_2/images/image.png"
+        },
+        {
+          "id": "OjHzInVg0",
+          "name": "CheckMyGuest",
+          "filePath": "../public/plasmic/achyle_2/images/checkMyGuest.png"
+        },
+        {
+          "id": "HLKiw95sN",
+          "name": "Havas",
+          "filePath": "../public/plasmic/achyle_2/images/havas.png"
+        },
+        {
+          "id": "-MeRKtEGJ",
+          "name": "Publicis",
+          "filePath": "../public/plasmic/achyle_2/images/publicis.png"
+        },
+        {
+          "id": "5ylO9fmU9",
+          "name": "Vestiaire Collective",
+          "filePath": "../public/plasmic/achyle_2/images/vestiaireCollective.png"
         }
       ],
       "indirect": false,
@@ -380,6 +376,16 @@
           "id": "Gdv2ygPDlS",
           "name": "InputText",
           "componentImportPath": "./components/InputText"
+        },
+        {
+          "id": "1jSiimUhK0",
+          "name": "SlideShow",
+          "componentImportPath": "./components/SlideShow"
+        },
+        {
+          "id": "1V2SMdhGub",
+          "name": "Slide",
+          "componentImportPath": "./components/SlideShow"
         }
       ]
     },

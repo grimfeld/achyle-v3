@@ -33,7 +33,6 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import Input from "../../Input"; // plasmic-import: UoBPAHd4v2/component
 import Button from "../../Button"; // plasmic-import: KxQ-6Oe5Yl/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -53,7 +52,6 @@ export const PlasmicCta__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicCta__OverridesType = {
   root?: p.Flex<"div">;
-  input?: p.Flex<typeof Input>;
   button?: p.Flex<typeof Button>;
 };
 
@@ -83,12 +81,6 @@ function PlasmicCta__RenderFunc(props: {
         sty.root
       )}
     >
-      <Input
-        data-plasmic-name={"input"}
-        data-plasmic-override={overrides.input}
-        className={classNames("__wab_instance", sty.input)}
-      />
-
       <Button
         data-plasmic-name={"button"}
         data-plasmic-override={overrides.button}
@@ -99,8 +91,7 @@ function PlasmicCta__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "input", "button"],
-  input: ["input"],
+  root: ["root", "button"],
   button: ["button"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -108,7 +99,6 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  input: typeof Input;
   button: typeof Button;
 };
 
@@ -173,7 +163,6 @@ export const PlasmicCta = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    input: makeNodeComponent("input"),
     button: makeNodeComponent("button"),
 
     // Metadata about props expected for PlasmicCta

@@ -38,6 +38,7 @@ import Navbar from "../../Navbar"; // plasmic-import: TR4BFzjq4x/component
 import Button from "../../Button"; // plasmic-import: KxQ-6Oe5Yl/component
 import Heading from "../../Heading"; // plasmic-import: iLkYtMJ5YQ/component
 import Paragraph from "../../Paragraph"; // plasmic-import: ds4yKdokUn/component
+import { SlideShow } from "../../SlideShow"; // plasmic-import: 1jSiimUhK0/codeComponent
 import Pill from "../../Pill"; // plasmic-import: lXfsMEnWoU/component
 import ListItem from "../../ListItem"; // plasmic-import: xUitMmxl0F/component
 import Divider from "../../Divider"; // plasmic-import: 79e3ncUiiG/component
@@ -63,6 +64,7 @@ import CreditCardIcon from "./icons/PlasmicIcon__CreditCard"; // plasmic-import:
 import PhoneIcon from "./icons/PlasmicIcon__Phone"; // plasmic-import: OZ16LYpjm/icon
 import PlayIcon from "./icons/PlasmicIcon__Play"; // plasmic-import: Tj9Hf2bUy/icon
 import FlagIcon from "./icons/PlasmicIcon__Flag"; // plasmic-import: Y6M1qj5AP/icon
+import LockIcon from "./icons/PlasmicIcon__Lock"; // plasmic-import: Ul3jjtIQF/icon
 
 export type PlasmicHomepage__VariantMembers = {};
 
@@ -79,6 +81,7 @@ export type PlasmicHomepage__OverridesType = {
   background1?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
   button?: p.Flex<typeof Button>;
+  slideShow?: p.Flex<typeof SlideShow>;
   concentrezVousSurLessentielAchyleSoccuperaDuReste?: p.Flex<"div">;
   background2?: p.Flex<"div">;
   background3?: p.Flex<"div">;
@@ -240,8 +243,23 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.paragraph__gxeTe
                     )}
                   >
-                    {"Un grand nombre d'entreprises nous font confiance"}
+                    <div
+                      className={classNames(
+                        defaultcss.all,
+                        projectcss.all,
+                        defaultcss.__wab_text,
+                        sty.text___3456C
+                      )}
+                    >
+                      {"Un grand nombre d'entreprises nous font confiance"}
+                    </div>
                   </Paragraph>
+
+                  <SlideShow
+                    data-plasmic-name={"slideShow"}
+                    data-plasmic-override={overrides.slideShow}
+                    className={classNames("__wab_instance", sty.slideShow)}
+                  />
                 </div>
 
                 {(
@@ -1229,6 +1247,65 @@ function PlasmicHomepage__RenderFunc(props: {
                     data-plasmic-name={"form"}
                     data-plasmic-override={overrides.form}
                     className={classNames("__wab_instance", sty.form)}
+                    description={
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          sty.freeBox__qspLh
+                        )}
+                      >
+                        <LockIcon
+                          className={classNames(
+                            defaultcss.all,
+                            projectcss.all,
+                            sty.svg__txp0P
+                          )}
+                          role={"img"}
+                        />
+
+                        <Paragraph
+                          className={classNames(
+                            "__wab_instance",
+                            sty.paragraph___2Myu3
+                          )}
+                          dark={"dark" as const}
+                        >
+                          <div
+                            className={classNames(
+                              defaultcss.all,
+                              projectcss.all,
+                              defaultcss.__wab_text,
+                              sty.text__mJrdt
+                            )}
+                          >
+                            {" 100% sécurisé. Pas de logiciel à installer."}
+                          </div>
+                        </Paragraph>
+                      </div>
+                    }
+                    paragraph={
+                      <Paragraph
+                        className={classNames(
+                          "__wab_instance",
+                          sty.paragraph__vSTuW
+                        )}
+                        dark={"dark" as const}
+                      >
+                        <div
+                          className={classNames(
+                            defaultcss.all,
+                            projectcss.all,
+                            defaultcss.__wab_text,
+                            sty.text__tyNz1
+                          )}
+                        >
+                          {
+                            "En cliquant sur \"Demandez votre démo\" vous acceptez d'être contacté par Achyle concernant cette démonstration. Pour en savoir plus sur l'utilisation de vos données personnelles, consultez notre politique de confidentialité."
+                          }
+                        </div>
+                      </Paragraph>
+                    }
                   />
                 </div>
               </div>
@@ -1329,6 +1406,7 @@ const PlasmicDescendants = {
     "background1",
     "navbar",
     "button",
+    "slideShow",
     "concentrezVousSurLessentielAchyleSoccuperaDuReste",
     "background2",
     "background3",
@@ -1337,9 +1415,10 @@ const PlasmicDescendants = {
     "footer",
     "form"
   ],
-  background1: ["background1", "navbar", "button"],
+  background1: ["background1", "navbar", "button", "slideShow"],
   navbar: ["navbar", "button"],
   button: ["button"],
+  slideShow: ["slideShow"],
   concentrezVousSurLessentielAchyleSoccuperaDuReste: [
     "concentrezVousSurLessentielAchyleSoccuperaDuReste"
   ],
@@ -1358,6 +1437,7 @@ type NodeDefaultElementType = {
   background1: "div";
   navbar: typeof Navbar;
   button: typeof Button;
+  slideShow: typeof SlideShow;
   concentrezVousSurLessentielAchyleSoccuperaDuReste: "div";
   background2: "div";
   background3: "div";
@@ -1431,6 +1511,7 @@ export const PlasmicHomepage = Object.assign(
     background1: makeNodeComponent("background1"),
     navbar: makeNodeComponent("navbar"),
     button: makeNodeComponent("button"),
+    slideShow: makeNodeComponent("slideShow"),
     concentrezVousSurLessentielAchyleSoccuperaDuReste: makeNodeComponent(
       "concentrezVousSurLessentielAchyleSoccuperaDuReste"
     ),

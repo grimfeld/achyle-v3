@@ -1,0 +1,77 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: Inter, sans-serif;
+  transition: all;
+  margin: 12px 0;
+}
+
+.InputWrapper {
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #c2cfd6;
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+
+.InputWrapper.Focused {
+  border-color: #121a29;
+  transition-duration: 0.2s;
+}
+
+.InputWrapper.Invalid {
+  border-color: #c9595c;
+}
+
+.Label {
+  color: #b0bfc9;
+  position: absolute;
+  font-size: 16px;
+  top: calc(50% - 12px);
+  pointer-events: none;
+  transition-duration: 0.2s;
+}
+
+.Label.Focused {
+  font-size: 12px;
+  top: calc(50% - 16px / 2 - 16px);
+  transition-duration: 0.2s;
+}
+
+.Input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #121a29;
+  padding: 0;
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+.Input::placeholder {
+  color: #b0bfc9;
+  font-size: 16px;
+  font-family: Inter;
+}
+
+.Icon path {
+  fill: #c9595c;
+}
+
+.Error {
+  padding-left: 16px;
+  padding-top: 4px;
+  font-size: 12px;
+  color: #c9595c;
+}
+
+.Helper {
+  padding-left: 16px;
+  padding-top: 4px;
+  font-size: 12px;
+  color: #b0bfc9;
+}

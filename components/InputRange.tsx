@@ -9,7 +9,6 @@ export function InputRange ({ className, value, step, min, max, handleChange }: 
     setIntervals([])
     const step = (max - min) / 10
     for (let i = 0; i <= 10; i++) {
-      console.log(i * step)
       setIntervals(intervals => [...intervals, i * step])
     }
   }, [max, min])

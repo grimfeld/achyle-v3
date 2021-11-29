@@ -47,18 +47,23 @@ export const PlasmicButton__VariantProps = new Array<VariantPropType>();
 
 export type PlasmicButton__ArgsType = {
   children?: React.ReactNode;
+  type?: string;
 };
 
 type ArgPropType = keyof PlasmicButton__ArgsType;
-export const PlasmicButton__ArgProps = new Array<ArgPropType>("children");
+export const PlasmicButton__ArgProps = new Array<ArgPropType>(
+  "children",
+  "type"
+);
 
 export type PlasmicButton__OverridesType = {
-  root?: p.Flex<"div">;
+  root?: p.Flex<"button">;
   freeBox?: p.Flex<"div">;
 };
 
 export interface DefaultButtonProps {
   children?: React.ReactNode;
+  type?: string;
   className?: string;
 }
 
@@ -72,17 +77,18 @@ function PlasmicButton__RenderFunc(props: {
   const { variants, args, overrides, forNode, dataFetches } = props;
 
   return (
-    <div
+    <button
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        defaultcss.all,
-        projectcss.all,
+        defaultcss.button,
+        projectcss.button,
         projectcss.root_reset,
         sty.root
       )}
+      type={args.type !== undefined ? args.type : ("submit" as const)}
     >
       <div
         data-plasmic-name={"freeBox"}
@@ -95,7 +101,7 @@ function PlasmicButton__RenderFunc(props: {
           className: classNames(sty.slotTargetChildren)
         })}
       </div>
-    </div>
+    </button>
   ) as React.ReactElement | null;
 }
 
@@ -107,7 +113,7 @@ type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
-  root: "div";
+  root: "button";
   freeBox: "div";
 };
 

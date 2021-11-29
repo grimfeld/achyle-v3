@@ -4,7 +4,8 @@ import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/host'
 import { InputRange } from "@components/InputRange"
 import { Simulator } from "@components/Simulator"
 import { Form } from "@components/Form"
-import { InputText } from "@components/Input"
+import { InputText } from "@components/InputText"
+import { Slide, SlideShow } from "@components/SlideShow"
 
 // You can register any code components that you want to use here; see
 // https://docs.plasmic.app/learn/code-components-ref/
@@ -54,7 +55,9 @@ registerComponent(Simulator, {
 registerComponent(Form, {
   name: "Form",
   props: {
-    className: "string"
+    className: "string",
+    paragraph: "slot",
+    description: "slot"
   },
   importPath: "./components/Form"
 })
@@ -65,6 +68,23 @@ registerComponent(InputText, {
     className: "string"
   },
   importPath: "./components/InputText"
+})
+
+registerComponent(SlideShow, {
+  name: "SlideShow",
+  props: {
+    className: "string"
+  },
+  importPath: "./components/SlideShow"
+})
+
+registerComponent(Slide, {
+  name: "Slide",
+  props: {
+    className: "string",
+    children: "slot"
+  },
+  importPath: "./components/SlideShow"
 })
 
 export default function Host () {
