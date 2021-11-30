@@ -125,6 +125,11 @@ function PlasmicPill__RenderFunc(props: {
             variants,
             "circleVariant",
             "circleVariant"
+          ),
+          [sty.freeBox__starVariant]: hasVariant(
+            variants,
+            "starVariant",
+            "starVariant"
           )
         })}
       >

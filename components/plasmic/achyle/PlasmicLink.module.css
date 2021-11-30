@@ -15,9 +15,6 @@
 .root:hover {
   background: #26947d;
 }
-.root:disabled {
-  background: #d6dee5;
-}
 .freeBox {
   position: relative;
   width: auto;
@@ -28,7 +25,4 @@
 }
 .slotTargetChildren {
   color: #ebf0f2 /* plasmic-token: 0fyKU1aD3 */;
-}
-.root:disabled .slotTargetChildren {
-  color: #b0bfc9 /* plasmic-token: 8bnyAybve */;
 }

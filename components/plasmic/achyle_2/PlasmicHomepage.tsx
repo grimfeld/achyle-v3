@@ -35,7 +35,7 @@ import {
 } from "@plasmicapp/react-web";
 import Section from "../../Section"; // plasmic-import: -MewncD7Wg3/component
 import Navbar from "../../Navbar"; // plasmic-import: TR4BFzjq4x/component
-import Button from "../../Button"; // plasmic-import: KxQ-6Oe5Yl/component
+import Link2 from "../../Link"; // plasmic-import: 5MLV0Vivwy/component
 import Heading from "../../Heading"; // plasmic-import: iLkYtMJ5YQ/component
 import Paragraph from "../../Paragraph"; // plasmic-import: ds4yKdokUn/component
 import { SlideShow } from "../../SlideShow"; // plasmic-import: 1jSiimUhK0/codeComponent
@@ -80,7 +80,6 @@ export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
   background1?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
-  button?: p.Flex<typeof Button>;
   slideShow?: p.Flex<typeof SlideShow>;
   concentrezVousSurLessentielAchyleSoccuperaDuReste?: p.Flex<"div">;
   background2?: p.Flex<"div">;
@@ -152,30 +151,66 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.navbar}
                 className={classNames("__wab_instance", sty.navbar)}
                 slot={
-                  <React.Fragment>
-                    <div
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(
+                      defaultcss.all,
+                      projectcss.all,
+                      sty.freeBox__ru6D
+                    )}
+                  >
+                    <p.PlasmicLink
                       className={classNames(
-                        defaultcss.all,
-                        projectcss.all,
+                        defaultcss.a,
+                        projectcss.a,
                         defaultcss.__wab_text,
-                        sty.text__oiRe6
+                        sty.link__p3NCb
                       )}
+                      component={Link}
+                      href={"#contact" as const}
+                      platform={"nextjs"}
                     >
                       {"Contact"}
-                    </div>
+                    </p.PlasmicLink>
 
-                    <Button
-                      data-plasmic-name={"button"}
-                      data-plasmic-override={overrides.button}
-                      className={classNames("__wab_instance", sty.button)}
+                    <Link2
+                      className={classNames("__wab_instance", sty.link__w9GDo)}
+                      target={"#contact" as const}
                     >
                       {hasVariant(globalVariants, "screen", "mobileOnly")
                         ? "Démo"
                         : "Demander une démo"}
-                    </Button>
-                  </React.Fragment>
+                    </Link2>
+                  </p.Stack>
                 }
-              />
+              >
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__yynHx)}
+                  displayHeight={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? ("33px" as const)
+                      : ("48px" as const)
+                  }
+                  displayMaxHeight={"none" as const}
+                  displayMaxWidth={"100%" as const}
+                  displayMinHeight={"0" as const}
+                  displayMinWidth={"0" as const}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? ("100px" as const)
+                      : ("142px" as const)
+                  }
+                  loading={"lazy" as const}
+                  src={{
+                    src: "/plasmic/achyle_2/images/logoWhite.png",
+                    fullWidth: 865,
+                    fullHeight: 292,
+                    aspectRatio: undefined
+                  }}
+                />
+              </Navbar>
 
               <div
                 className={classNames(
@@ -580,7 +615,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   className={classNames(sty.img__ceXns)}
                   displayHeight={"auto" as const}
                   displayMaxHeight={"none" as const}
-                  displayMaxWidth={"100%" as const}
+                  displayMaxWidth={
+                    hasVariant(globalVariants, "screen", "tablet")
+                      ? ("50%" as const)
+                      : ("100%" as const)
+                  }
                   displayMinHeight={"0" as const}
                   displayMinWidth={"0" as const}
                   displayWidth={"auto" as const}
@@ -1079,13 +1118,16 @@ function PlasmicHomepage__RenderFunc(props: {
               projectcss.all,
               sty.background4
             )}
+            id={"contact" as const}
           >
             <Section
               data-plasmic-name={"footer"}
               data-plasmic-override={overrides.footer}
               className={classNames("__wab_instance", sty.footer)}
             >
-              <div
+              <p.Stack
+                as={"div"}
+                hasGap={true}
                 className={classNames(
                   defaultcss.all,
                   projectcss.all,
@@ -1308,7 +1350,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                   />
                 </div>
-              </div>
+              </p.Stack>
 
               <Divider
                 className={classNames("__wab_instance", sty.divider__j0Ovn)}
@@ -1405,7 +1447,6 @@ const PlasmicDescendants = {
     "root",
     "background1",
     "navbar",
-    "button",
     "slideShow",
     "concentrezVousSurLessentielAchyleSoccuperaDuReste",
     "background2",
@@ -1415,9 +1456,8 @@ const PlasmicDescendants = {
     "footer",
     "form"
   ],
-  background1: ["background1", "navbar", "button", "slideShow"],
-  navbar: ["navbar", "button"],
-  button: ["button"],
+  background1: ["background1", "navbar", "slideShow"],
+  navbar: ["navbar"],
   slideShow: ["slideShow"],
   concentrezVousSurLessentielAchyleSoccuperaDuReste: [
     "concentrezVousSurLessentielAchyleSoccuperaDuReste"
@@ -1436,7 +1476,6 @@ type NodeDefaultElementType = {
   root: "div";
   background1: "div";
   navbar: typeof Navbar;
-  button: typeof Button;
   slideShow: typeof SlideShow;
   concentrezVousSurLessentielAchyleSoccuperaDuReste: "div";
   background2: "div";
@@ -1510,7 +1549,6 @@ export const PlasmicHomepage = Object.assign(
     // Helper components rendering sub-elements
     background1: makeNodeComponent("background1"),
     navbar: makeNodeComponent("navbar"),
-    button: makeNodeComponent("button"),
     slideShow: makeNodeComponent("slideShow"),
     concentrezVousSurLessentielAchyleSoccuperaDuReste: makeNodeComponent(
       "concentrezVousSurLessentielAchyleSoccuperaDuReste"

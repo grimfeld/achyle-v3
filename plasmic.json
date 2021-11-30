@@ -24,7 +24,7 @@
     {
       "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
       "projectApiToken": "7yaq8lkuPTfPJUP9SepoQIu08oGMf0X9CnaOzemuCl0im0RIf981m1YnNXVSUOPczJFCLch5KyIgjDZVbXZqgQ",
-      "projectName": "Achyle2",
+      "projectName": "Achyle",
       "version": "latest",
       "cssFilePath": "plasmic/achyle_2/plasmic_achyle_2.module.css",
       "components": [
@@ -207,6 +207,19 @@
             "modulePath": "FooterLink.tsx"
           },
           "cssFilePath": "plasmic/achyle_2/PlasmicFooterLink.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "5MLV0Vivwy",
+          "name": "Link",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle/PlasmicLink.tsx",
+          "importSpec": {
+            "modulePath": "Link.tsx"
+          },
+          "cssFilePath": "plasmic/achyle/PlasmicLink.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }

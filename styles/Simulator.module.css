@@ -1,6 +1,15 @@
+.Wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .Row {
   display: flex;
   margin: 32px 0;
+}
+
+.Range {
+  margin-left: 32px;
 }
 
 .Box {
@@ -31,4 +40,43 @@
   margin: 0;
   color: rgba(18, 26, 41, 0.75);
   font-size: 16px;
+}
+
+.IconRight {
+  position: absolute;
+  top: -119px;
+  right: 35px;
+  width: 210px;
+  height: 210px;
+}
+
+.IconRight path {
+  fill: #ede5d6;
+}
+
+.IconLeft {
+  position: absolute;
+  top: 34px;
+  left: -134px;
+  width: 210px;
+  height: 210px;
+}
+
+.IconLeft path {
+  fill: #66a699;
+}
+
+@media all and (max-width: 768px) {
+  .Row {
+    flex-direction: column;
+  }
+  .Range {
+    margin-left: 0;
+  }
+  .Box {
+    width: 100%;
+  }
+  .Box:nth-child(1) {
+    margin-bottom: 16px;
+  }
 }

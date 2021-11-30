@@ -33,7 +33,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import Button from "../../Button"; // plasmic-import: KxQ-6Oe5Yl/component
+import Link2 from "../../Link"; // plasmic-import: 5MLV0Vivwy/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-import: global/defaultcss
@@ -123,7 +123,15 @@ function PlasmicNavbar__RenderFunc(props: {
       >
         {p.renderPlasmicSlot({
           defaultContents: (
-            <React.Fragment>
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(
+                defaultcss.all,
+                projectcss.all,
+                sty.freeBox__wSrYc
+              )}
+            >
               <div
                 className={classNames(
                   defaultcss.all,
@@ -135,11 +143,12 @@ function PlasmicNavbar__RenderFunc(props: {
                 {"Contact"}
               </div>
 
-              <Button
-                className={classNames("__wab_instance", sty.button__lZsV)}
+              <Link2
+                className={classNames("__wab_instance", sty.link__aSobs)}
               />
-            </React.Fragment>
+            </p.Stack>
           ),
+
           value: args.slot
         })}
       </p.Stack>
