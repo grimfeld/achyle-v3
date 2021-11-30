@@ -1,3 +1,8 @@
+.Wrapper {
+  position: relative;
+  margin-bottom: 64px;
+}
+
 .Form {
   display: flex;
   flex-direction: column;
@@ -27,7 +32,50 @@
   margin-left: 12px;
 }
 
-@media all and (max-width: 1024px) {
+.Error {
+  font-size: 13px;
+  color: #c9595c;
+  margin: auto;
+  font-weight: bold;
+  margin-top: 16px;
+  text-align: center;
+}
+.Message {
+  font-size: 13px;
+  color: #5ea36e;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.IconRight {
+  z-index: 0;
+  position: absolute;
+  top: 0px;
+  right: -106px;
+  width: 174px;
+  height: 174px;
+}
+
+.IconRight path {
+  fill: #66a699;
+}
+
+.IconLeft {
+  z-index: 0;
+  position: absolute;
+  bottom: -49px;
+  left: -55px;
+  width: 185px;
+  height: 194px;
+}
+
+.IconLeft path {
+  fill: #3d707d;
+}
+
+@media all and (max-width: 768px) {
   .Row {
     flex-direction: column;
   }

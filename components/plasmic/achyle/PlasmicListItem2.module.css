@@ -1,0 +1,29 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+.svg {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  margin-right: 20px;
+  color: #3d707d /* plasmic-token: P5Mf1KOrz */;
+  width: 1em;
+  flex-shrink: 0;
+  height: 1em;
+}
+.paragraph___8FZlh:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.text__xlXuM {
+  color: #121a29bf /* plasmic-token: 0ns3OrR_c */;
+  font-family: Inter /* plasmic-token: Mnz7nYzeb */;
+  font-size: 16px /* plasmic-token: F3aqJ_4sR */;
+}

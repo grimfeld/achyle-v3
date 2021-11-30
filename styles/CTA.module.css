@@ -1,0 +1,27 @@
+.Wrapper {
+  background: rgba(235, 240, 242, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  padding-left: 21px;
+  border-radius: 30px;
+}
+
+.Input {
+  background: transparent;
+  border: none;
+  flex-grow: 1;
+  margin-left: 16px;
+  color: rgb(255, 255, 255);
+  font-family: Inter, sans-serif;
+  outline: none;
+}
+
+.Wrapper.Light {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.Wrapper.Light .Input {
+  color: rgb(18, 26, 41, 0.5);
+}

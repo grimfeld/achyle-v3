@@ -71,6 +71,26 @@
       }
     },
     {
+      "name": "Gris 200",
+      "type": "color",
+      "value": "#D6DEE5",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "xaoRMZ5DH"
+      }
+    },
+    {
+      "name": "Gris 300",
+      "type": "color",
+      "value": "#B0BFC9",
+      "category": "color",
+      "meta": {
+        "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+        "id": "8bnyAybve"
+      }
+    },
+    {
       "name": "H1",
       "type": "fontsize",
       "value": "72px",
