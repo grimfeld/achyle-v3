@@ -6,7 +6,7 @@ import { Simulator } from "@components/Simulator"
 import { Form } from "@components/Form"
 import { InputText } from "@components/InputText"
 import { Slide, SlideShow } from "@components/SlideShow"
-import { CTA } from "@components/CTA"
+import { CallToAction } from "@components/CallToAction"
 
 // You can register any code components that you want to use here; see
 // https://docs.plasmic.app/learn/code-components-ref/
@@ -88,15 +88,15 @@ registerComponent(Slide, {
   importPath: "./components/SlideShow"
 })
 
-registerComponent(CTA, {
-  name: "CTA",
+registerComponent(CallToAction, {
+  name: "CallToAction",
   props: {
     className: "string",
     icon: "slot",
     button: "slot",
     light: "boolean"
   },
-  importPath: "./components/CTA"
+  importPath: "./components/CallToAction"
 })
 
 export default function Host () {

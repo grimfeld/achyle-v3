@@ -38,7 +38,7 @@ import Navbar from "../../Navbar"; // plasmic-import: TR4BFzjq4x/component
 import Link2 from "../../Link"; // plasmic-import: 5MLV0Vivwy/component
 import Heading from "../../Heading"; // plasmic-import: iLkYtMJ5YQ/component
 import Paragraph from "../../Paragraph"; // plasmic-import: ds4yKdokUn/component
-import { CTA } from "../../CTA"; // plasmic-import: t_W7DIUClz/codeComponent
+import { CallToAction } from "../../CallToAction"; // plasmic-import: CNliJAZqjw/codeComponent
 import { SlideShow } from "../../SlideShow"; // plasmic-import: 1jSiimUhK0/codeComponent
 import Pill from "../../Pill"; // plasmic-import: lXfsMEnWoU/component
 import WhiteListItem from "../../WhiteListItem"; // plasmic-import: 3Cts4VO6UT/component
@@ -284,7 +284,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     </div>
                   </Paragraph>
 
-                  <CTA
+                  <CallToAction
                     button={
                       <Link2
                         className={classNames(
@@ -298,7 +298,10 @@ function PlasmicHomepage__RenderFunc(props: {
                           : "Demander une démo"}
                       </Link2>
                     }
-                    className={classNames("__wab_instance", sty.cta__exAwv)}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.callToAction__exAwv
+                    )}
                     icon={
                       <MailIcon
                         className={classNames(
@@ -773,7 +776,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   dark={"dark" as const}
                 />
 
-                <CTA
+                <CallToAction
                   button={
                     <Link2
                       className={classNames("__wab_instance", sty.link__w3Jpl)}
@@ -793,7 +796,10 @@ function PlasmicHomepage__RenderFunc(props: {
                       </div>
                     </Link2>
                   }
-                  className={classNames("__wab_instance", sty.cta__ij590)}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.callToAction__ij590
+                  )}
                   icon={
                     <MailIcon
                       className={classNames(

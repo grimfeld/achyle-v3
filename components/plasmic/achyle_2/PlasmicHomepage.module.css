@@ -166,7 +166,7 @@
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.cta__exAwv:global(.__wab_instance) {
+.callToAction__exAwv:global(.__wab_instance) {
   max-width: 90%;
   position: relative;
   width: 100%;
@@ -174,7 +174,7 @@
   min-width: 0;
 }
 @media (max-width: 1024px) {
-  .cta__exAwv:global(.__wab_instance) {
+  .callToAction__exAwv:global(.__wab_instance) {
     max-width: 100%;
   }
 }
@@ -656,7 +656,7 @@
     min-width: 0;
   }
 }
-.cta__ij590:global(.__wab_instance) {
+.callToAction__ij590:global(.__wab_instance) {
   max-width: 90%;
   position: relative;
   width: 100%;
@@ -667,7 +667,7 @@
   min-width: 0;
 }
 @media (max-width: 1024px) {
-  .cta__ij590:global(.__wab_instance) {
+  .callToAction__ij590:global(.__wab_instance) {
     margin-left: calc(0px + 0px) !important;
     margin-top: calc(0px + 32px) !important;
   }

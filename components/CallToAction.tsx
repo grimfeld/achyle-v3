@@ -2,7 +2,7 @@ import styles from "@styles/CTA.module.css"
 import { EmailContext } from 'contexts/Email'
 import { ChangeEvent, useContext } from 'react'
 
-export function CTA ({ light, icon, button, className }: { light: Boolean, icon: JSX.Element, button: JSX.Element, className: string }): JSX.Element {
+export function CallToAction ({ light, icon, button, className }: { light: Boolean, icon: JSX.Element, button: JSX.Element, className: string }): JSX.Element {
 
   const { email, changeEmail } = useContext(EmailContext)
 

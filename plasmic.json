@@ -430,9 +430,9 @@
           "componentImportPath": "./components/SlideShow"
         },
         {
-          "id": "t_W7DIUClz",
-          "name": "CTA",
-          "componentImportPath": "./components/CTA"
+          "id": "CNliJAZqjw",
+          "name": "CallToAction",
+          "componentImportPath": "./components/CallToAction"
         }
       ]
     },
