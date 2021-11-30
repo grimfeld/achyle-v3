@@ -1,0 +1,33 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  min-width: 0;
+}
+.svg {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  margin-right: 20px;
+  color: #ffffff00;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.root:hover .svg {
+  color: #ffffff /* plasmic-token: JSKB1tujS */;
+}
+.paragraph___8FZlh:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.text__xlXuM {
+  color: #121a29 /* plasmic-token: Hpw-5dGGk */;
+  font-family: Belleza /* plasmic-token: 4OZR8UGM1 */;
+  font-size: 36px /* plasmic-token: KXQj2QAld */;
+}

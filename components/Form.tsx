@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useContext, useEffect, useMemo, useState } from 'react'
 import { InputText } from '@components/InputText'
 import * as yup from "yup"
 import { Formik, Form as FormikForm, Field, FieldInputProps, FormikProps, FormikHelpers } from "formik"
@@ -6,6 +6,7 @@ import styles from "@styles/Form.module.css"
 import Button from './Button'
 import PlasmicIcon__9BranchesStar from "@components/plasmic/achyle_2/icons/PlasmicIcon___9BranchesStar"
 import PlasmicIcon__DoubleCircles from "@components/plasmic/achyle_2/icons/PlasmicIcon__DoubleCircles"
+import { EmailContext } from 'contexts/Email'
 export interface FormData {
   name: string
   firstName: string
@@ -30,10 +31,13 @@ export function Form ({ className, paragraph, description }: { className: string
   const [error, setError] = useState<string | null>(null)
   const [message, setMessage] = useState<string | null>(null)
 
+  const { email } = useContext(EmailContext)
+  console.log("🚀 ~ file: Form.tsx ~ line 35 ~ Form ~ email", email)
+
   const initialValues: FormData = {
     name: "",
     firstName: "",
-    email: "",
+    email: email ?? '',
     phone: "",
     location: "",
     job: "",
@@ -78,7 +82,7 @@ export function Form ({ className, paragraph, description }: { className: string
       <PlasmicIcon__9BranchesStar className={styles.IconRight} />
       <PlasmicIcon__DoubleCircles className={styles.IconLeft} />
       <div className={className}>
-        <Formik initialValues={initialValues} onSubmit={submit} validationSchema={validationSchema}>
+        <Formik initialValues={initialValues} onSubmit={submit} validationSchema={validationSchema} enableReinitialize={true}>
           {({ values, isSubmitting }) => (
             <FormikForm>
               <div className={styles.Form}>
@@ -194,7 +198,7 @@ export function Form ({ className, paragraph, description }: { className: string
                   </Field>
                 </div>
                 {paragraph}
-                <Button type="submit" className={styles.Button}>
+                <Button type="submit" className={styles.Button} disabled={isSubmitting}>
                   Demander une démo
                 </Button>
                 {error && <span className={styles.Error}>{error}</span>}

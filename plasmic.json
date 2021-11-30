@@ -94,19 +94,6 @@
           "componentType": "component"
         },
         {
-          "id": "KMaiExXsEA",
-          "name": "Cta",
-          "type": "managed",
-          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
-          "renderModuleFilePath": "plasmic/achyle_2/PlasmicCta.tsx",
-          "importSpec": {
-            "modulePath": "Cta.tsx"
-          },
-          "cssFilePath": "plasmic/achyle_2/PlasmicCta.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "XtbwwYm6Vx",
           "name": "Slider",
           "type": "managed",
@@ -222,6 +209,33 @@
           "cssFilePath": "plasmic/achyle/PlasmicLink.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "5exiwvnt-83",
+          "name": "TextInput",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle/PlasmicTextInput.tsx",
+          "importSpec": {
+            "modulePath": "TextInput.tsx"
+          },
+          "cssFilePath": "plasmic/achyle/PlasmicTextInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "text-input"
+        },
+        {
+          "id": "3Cts4VO6UT",
+          "name": "WhiteListItem",
+          "type": "managed",
+          "projectId": "9mqNJRrUCJdF1Qi4kUEnK1",
+          "renderModuleFilePath": "plasmic/achyle/PlasmicWhiteListItem.tsx",
+          "importSpec": {
+            "modulePath": "WhiteListItem.tsx"
+          },
+          "cssFilePath": "plasmic/achyle/PlasmicWhiteListItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -304,6 +318,21 @@
           "id": "Ul3jjtIQF",
           "name": "LockIcon",
           "moduleFilePath": "plasmic/achyle_2/icons/PlasmicIcon__Lock.tsx"
+        },
+        {
+          "id": "s6unVfA-a6D",
+          "name": "SearchsvgIcon",
+          "moduleFilePath": "plasmic/achyle/icons/PlasmicIcon__Searchsvg.tsx"
+        },
+        {
+          "id": "AN9bync_cFg",
+          "name": "ChecksvgIcon",
+          "moduleFilePath": "plasmic/achyle/icons/PlasmicIcon__Checksvg.tsx"
+        },
+        {
+          "id": "UPsWpbKzF",
+          "name": "MailIcon",
+          "moduleFilePath": "plasmic/achyle/icons/PlasmicIcon__Mail.tsx"
         }
       ],
       "images": [
@@ -399,6 +428,11 @@
           "id": "1V2SMdhGub",
           "name": "Slide",
           "componentImportPath": "./components/SlideShow"
+        },
+        {
+          "id": "t_W7DIUClz",
+          "name": "CTA",
+          "componentImportPath": "./components/CTA"
         }
       ]
     },

@@ -38,11 +38,13 @@ import Navbar from "../../Navbar"; // plasmic-import: TR4BFzjq4x/component
 import Link2 from "../../Link"; // plasmic-import: 5MLV0Vivwy/component
 import Heading from "../../Heading"; // plasmic-import: iLkYtMJ5YQ/component
 import Paragraph from "../../Paragraph"; // plasmic-import: ds4yKdokUn/component
+import { CTA } from "../../CTA"; // plasmic-import: t_W7DIUClz/codeComponent
 import { SlideShow } from "../../SlideShow"; // plasmic-import: 1jSiimUhK0/codeComponent
 import Pill from "../../Pill"; // plasmic-import: lXfsMEnWoU/component
-import ListItem from "../../ListItem"; // plasmic-import: xUitMmxl0F/component
+import WhiteListItem from "../../WhiteListItem"; // plasmic-import: 3Cts4VO6UT/component
 import Divider from "../../Divider"; // plasmic-import: 79e3ncUiiG/component
 import Rectangle from "../../Rectangle"; // plasmic-import: hVvONWSKSkN/component
+import ListItem from "../../ListItem"; // plasmic-import: xUitMmxl0F/component
 import { Simulator } from "../../Simulator"; // plasmic-import: AnL57GQcOM/codeComponent
 import FooterListItem from "../../FooterListItem"; // plasmic-import: rmbHJKVaT7/component
 import { Form } from "../../Form"; // plasmic-import: j4VGSv_Ccx/codeComponent
@@ -55,6 +57,7 @@ import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-i
 import * as projectcss from "./plasmic_achyle_2.module.css"; // plasmic-import: 9mqNJRrUCJdF1Qi4kUEnK1/projectcss
 import * as sty from "./PlasmicHomepage.module.css"; // plasmic-import: kyoneW7tS_/css
 
+import MailIcon from "../achyle/icons/PlasmicIcon__Mail"; // plasmic-import: UPsWpbKzF/icon
 import _8BranchesStarIcon from "./icons/PlasmicIcon___8BranchesStar"; // plasmic-import: ut5tcmzu6/icon
 import ContractIcon from "./icons/PlasmicIcon__Contract"; // plasmic-import: fMAKgq5kC/icon
 import TimeIcon from "./icons/PlasmicIcon__Time"; // plasmic-import: uWFrTHISq/icon
@@ -267,10 +270,46 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.paragraph__uzKg
                     )}
                   >
-                    {
-                      "Grâce à Achyle, rédigez vos contrats à la perfection tout\nen gagnant du temps"
-                    }
+                    <div
+                      className={classNames(
+                        defaultcss.all,
+                        projectcss.all,
+                        defaultcss.__wab_text,
+                        sty.text__c042
+                      )}
+                    >
+                      {
+                        "Grâce à Achyle, rédigez vos contrats à la perfection tout\nen gagnant du temps"
+                      }
+                    </div>
                   </Paragraph>
+
+                  <CTA
+                    button={
+                      <Link2
+                        className={classNames(
+                          "__wab_instance",
+                          sty.link__e6Wgr
+                        )}
+                        target={"#contact" as const}
+                      >
+                        {hasVariant(globalVariants, "screen", "tablet")
+                          ? "Démo"
+                          : "Demander une démo"}
+                      </Link2>
+                    }
+                    className={classNames("__wab_instance", sty.cta__exAwv)}
+                    icon={
+                      <MailIcon
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          sty.svg__oKtft
+                        )}
+                        role={"img"}
+                      />
+                    }
+                  />
 
                   <Paragraph
                     className={classNames(
@@ -641,23 +680,64 @@ function PlasmicHomepage__RenderFunc(props: {
                     sty.freeBox__iyK6
                   )}
                 >
-                  <ListItem
-                    className={classNames("__wab_instance", sty.listItem__auwX)}
-                  />
-
-                  <ListItem
+                  <WhiteListItem
                     className={classNames(
                       "__wab_instance",
-                      sty.listItem__d4S6Q
+                      sty.whiteListItem__egTa3
                     )}
                   />
 
-                  <ListItem
+                  <WhiteListItem
                     className={classNames(
                       "__wab_instance",
-                      sty.listItem__aZsOh
+                      sty.whiteListItem__d1Y38
                     )}
-                  />
+                  >
+                    <Paragraph
+                      className={classNames(
+                        "__wab_instance",
+                        sty.paragraph__mo85D
+                      )}
+                      dark={"dark" as const}
+                    >
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text__m9ZHt
+                        )}
+                      >
+                        {"Générez le contrat"}
+                      </div>
+                    </Paragraph>
+                  </WhiteListItem>
+
+                  <WhiteListItem
+                    className={classNames(
+                      "__wab_instance",
+                      sty.whiteListItem__o2Y4J
+                    )}
+                  >
+                    <Paragraph
+                      className={classNames(
+                        "__wab_instance",
+                        sty.paragraph__sEa6R
+                      )}
+                      dark={"dark" as const}
+                    >
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text__sjE35
+                        )}
+                      >
+                        {"Votre contrat prêt à envoyer"}
+                      </div>
+                    </Paragraph>
+                  </WhiteListItem>
                 </p.Stack>
               </div>
 
@@ -665,7 +745,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 className={classNames("__wab_instance", sty.divider__lxWc)}
               />
 
-              <div
+              <p.Stack
+                as={"div"}
+                hasGap={true}
                 className={classNames(
                   defaultcss.all,
                   projectcss.all,
@@ -675,11 +757,56 @@ function PlasmicHomepage__RenderFunc(props: {
                 <Heading
                   className={classNames("__wab_instance", sty.heading__oinwt)}
                   content={
-                    "Vous souhaitez mettre en place\n Achyle dans votre entreprise ?"
+                    <div
+                      className={classNames(
+                        defaultcss.all,
+                        projectcss.all,
+                        defaultcss.__wab_text,
+                        sty.text__qscSa
+                      )}
+                    >
+                      {
+                        "Vous souhaitez mettre en place Achyle dans votre entreprise ?"
+                      }
+                    </div>
                   }
                   dark={"dark" as const}
                 />
-              </div>
+
+                <CTA
+                  button={
+                    <Link2
+                      className={classNames("__wab_instance", sty.link__w3Jpl)}
+                      target={"#contact" as const}
+                    >
+                      <div
+                        className={classNames(
+                          defaultcss.all,
+                          projectcss.all,
+                          defaultcss.__wab_text,
+                          sty.text__sFwm
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "tablet")
+                          ? "Démo"
+                          : "Demander une démo"}
+                      </div>
+                    </Link2>
+                  }
+                  className={classNames("__wab_instance", sty.cta__ij590)}
+                  icon={
+                    <MailIcon
+                      className={classNames(
+                        defaultcss.all,
+                        projectcss.all,
+                        sty.svg__kW0Lp
+                      )}
+                      role={"img"}
+                    />
+                  }
+                  light={true}
+                />
+              </p.Stack>
             </Section>
           </div>
 

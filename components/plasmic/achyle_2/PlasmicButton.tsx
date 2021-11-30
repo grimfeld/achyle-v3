@@ -48,12 +48,14 @@ export const PlasmicButton__VariantProps = new Array<VariantPropType>();
 export type PlasmicButton__ArgsType = {
   children?: React.ReactNode;
   type?: string;
+  disabled?: boolean;
 };
 
 type ArgPropType = keyof PlasmicButton__ArgsType;
 export const PlasmicButton__ArgProps = new Array<ArgPropType>(
   "children",
-  "type"
+  "type",
+  "disabled"
 );
 
 export type PlasmicButton__OverridesType = {
@@ -64,6 +66,7 @@ export type PlasmicButton__OverridesType = {
 export interface DefaultButtonProps {
   children?: React.ReactNode;
   type?: string;
+  disabled?: boolean;
   className?: string;
 }
 
@@ -88,6 +91,7 @@ function PlasmicButton__RenderFunc(props: {
         projectcss.root_reset,
         sty.root
       )}
+      disabled={args.disabled}
       type={args.type !== undefined ? args.type : ("submit" as const)}
     >
       <div
