@@ -84,7 +84,6 @@
   width: auto;
   height: auto;
   max-width: 800px;
-  display: inline-block;
 }
 .link__aSobs:global(.__wab_instance) {
   max-width: 100%;

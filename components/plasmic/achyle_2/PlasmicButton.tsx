@@ -35,7 +35,7 @@ import {
 } from "@plasmicapp/react-web";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
-import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-import: global/defaultcss
+
 import * as projectcss from "./plasmic_achyle_2.module.css"; // plasmic-import: 9mqNJRrUCJdF1Qi4kUEnK1/projectcss
 import * as sty from "./PlasmicButton.module.css"; // plasmic-import: KxQ-6Oe5Yl/css
 
@@ -85,19 +85,14 @@ function PlasmicButton__RenderFunc(props: {
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      className={classNames(
-        defaultcss.button,
-        projectcss.button,
-        projectcss.root_reset,
-        sty.root
-      )}
+      className={classNames(projectcss.button, projectcss.root_reset, sty.root)}
       disabled={args.disabled}
       type={args.type !== undefined ? args.type : ("submit" as const)}
     >
       <div
         data-plasmic-name={"freeBox"}
         data-plasmic-override={overrides.freeBox}
-        className={classNames(defaultcss.all, projectcss.all, sty.freeBox)}
+        className={classNames(projectcss.all, sty.freeBox)}
       >
         {p.renderPlasmicSlot({
           defaultContents: "Label",

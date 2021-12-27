@@ -1,0 +1,32 @@
+.Wrapper {
+  position: relative;
+  margin-bottom: 64px;
+  width: 100%;
+  height: 100%;
+}
+
+.IconRight {
+  z-index: 0;
+  position: absolute;
+  top: 0px;
+  right: -106px;
+  width: 174px;
+  height: 174px;
+}
+
+.IconRight path {
+  fill: #66a699;
+}
+
+.IconLeft {
+  z-index: 0;
+  position: absolute;
+  bottom: -49px;
+  left: -55px;
+  width: 185px;
+  height: 194px;
+}
+
+.IconLeft path {
+  fill: #3d707d;
+}

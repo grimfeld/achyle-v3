@@ -66,7 +66,6 @@ export function SlideShow ({ className }: { className?: string }) {
           </Slide>
         ))}
       </motion.div>
-      {width}
     </div>
   )
 }

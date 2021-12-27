@@ -37,7 +37,7 @@ import Heading from "../../Heading"; // plasmic-import: iLkYtMJ5YQ/component
 import Paragraph from "../../Paragraph"; // plasmic-import: ds4yKdokUn/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
-import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-import: global/defaultcss
+
 import * as projectcss from "./plasmic_achyle_2.module.css"; // plasmic-import: 9mqNJRrUCJdF1Qi4kUEnK1/projectcss
 import * as sty from "./PlasmicPill.module.css"; // plasmic-import: lXfsMEnWoU/css
 
@@ -103,24 +103,18 @@ function PlasmicPill__RenderFunc(props: {
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      className={classNames(
-        defaultcss.all,
-        projectcss.all,
-        projectcss.root_reset,
-        sty.root,
-        {
-          [sty.root__circleVariant]: hasVariant(
-            variants,
-            "circleVariant",
-            "circleVariant"
-          )
-        }
-      )}
+      className={classNames(projectcss.all, projectcss.root_reset, sty.root, {
+        [sty.root__circleVariant]: hasVariant(
+          variants,
+          "circleVariant",
+          "circleVariant"
+        )
+      })}
     >
       <div
         data-plasmic-name={"freeBox"}
         data-plasmic-override={overrides.freeBox}
-        className={classNames(defaultcss.all, projectcss.all, sty.freeBox, {
+        className={classNames(projectcss.all, sty.freeBox, {
           [sty.freeBox__circleVariant]: hasVariant(
             variants,
             "circleVariant",
@@ -136,11 +130,7 @@ function PlasmicPill__RenderFunc(props: {
         {p.renderPlasmicSlot({
           defaultContents: (
             <ContractIcon
-              className={classNames(
-                defaultcss.all,
-                projectcss.all,
-                sty.svg___6On80
-              )}
+              className={classNames(projectcss.all, sty.svg___6On80)}
               role={"img"}
             />
           ),
@@ -155,9 +145,8 @@ function PlasmicPill__RenderFunc(props: {
               content={
                 <div
                   className={classNames(
-                    defaultcss.all,
                     projectcss.all,
-                    defaultcss.__wab_text,
+                    projectcss.__wab_text,
                     sty.text___9QpDz
                   )}
                 >
@@ -187,24 +176,19 @@ function PlasmicPill__RenderFunc(props: {
         hasVariant(variants, "circleVariant", "circleVariant") ? true : true
       ) ? (
         <DoubleCirclesIcon
-          className={classNames(
-            defaultcss.all,
-            projectcss.all,
-            sty.svg___9VFia,
-            {
-              [sty.svg__circleVariant___9VFiadHxsA]: hasVariant(
-                variants,
-                "circleVariant",
-                "circleVariant"
-              )
-            }
-          )}
+          className={classNames(projectcss.all, sty.svg___9VFia, {
+            [sty.svg__circleVariant___9VFiadHxsA]: hasVariant(
+              variants,
+              "circleVariant",
+              "circleVariant"
+            )
+          })}
           role={"img"}
         />
       ) : null}
       {(hasVariant(variants, "starVariant", "starVariant") ? true : true) ? (
         <_9BranchesStarIcon
-          className={classNames(defaultcss.all, projectcss.all, sty.svg__uoYd, {
+          className={classNames(projectcss.all, sty.svg__uoYd, {
             [sty.svg__starVariant__uoYdTctkj]: hasVariant(
               variants,
               "starVariant",

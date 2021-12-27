@@ -1,8 +1,16 @@
-export function Calendly (): JSX.Element {
+import PlasmicIcon__9BranchesStar from "@components/plasmic/achyle_2/icons/PlasmicIcon___9BranchesStar"
+import PlasmicIcon__DoubleCircles from "@components/plasmic/achyle_2/icons/PlasmicIcon__DoubleCircles"
+import { InlineWidget } from 'react-calendly'
+import styles from "@styles/Calendly.module.css"
+
+export function Calendly ({ className }: { className: string }): JSX.Element {
   return (
-    <>
-      <div className="calendly-inline-widget" data-url="https://calendly.com/paulperson-pro/test" style={{ minWidth: "320px", height: "630px" }}></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    </>
+    <div className={styles.Wrapper}>
+      <PlasmicIcon__9BranchesStar className={styles.IconRight} />
+      <PlasmicIcon__DoubleCircles className={styles.IconLeft} />
+      <div className={className}>
+        <InlineWidget url="https://calendly.com/paulperson-pro/test" />
+      </div>
+    </div>
   )
 }
