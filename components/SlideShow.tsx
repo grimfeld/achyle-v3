@@ -24,14 +24,6 @@ export function SlideShow ({ className }: { className?: string }) {
       src: '/plasmic/achyle_2/images/havas.png',
       alt: "Havas"
     },
-    {
-      src: '/plasmic/achyle_2/images/publicis.png',
-      alt: "Publicis"
-    },
-    {
-      src: '/plasmic/achyle_2/images/vestiaireCollective.png',
-      alt: "Vestiaire Collective"
-    },
   ])
 
   useEffect(() => {
