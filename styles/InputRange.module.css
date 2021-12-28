@@ -17,7 +17,10 @@
 
 .LabelsWrapper span {
   font-size: 13px;
+  width: 20px;
   color: #b0bfc9;
+  display: grid;
+  place-items: center;
 }
 
 .CurrentValue {

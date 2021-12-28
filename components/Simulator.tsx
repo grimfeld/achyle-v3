@@ -22,8 +22,8 @@ export function Simulator ({ className, slot1, slot2, slot3, icon1, icon2 }: { c
   }
 
   React.useEffect(() => {
-    setHoursPerMonth(docsPerMonth * (hoursPerDoc - 2))
-    setHoursPerYear(hoursPerMonth * 12)
+    setHoursPerMonth(Math.round(docsPerMonth * hoursPerDoc - (docsPerMonth * hoursPerDoc / 3)))
+    setHoursPerYear(Math.round(hoursPerMonth * 12))
   }, [docsPerMonth, hoursPerDoc, hoursPerMonth])
 
   return (
