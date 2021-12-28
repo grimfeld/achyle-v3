@@ -1093,7 +1093,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                       >
                         {
-                          "Sans Achyle, combien de temps vous faut-il pour rédiger ces contrats ?"
+                          "Sans Achyle, combien de temps vous faut-il pour rédiger un contrat ?"
                         }
                       </div>
                     </Paragraph>
