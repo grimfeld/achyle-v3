@@ -9,7 +9,7 @@ export function Calendly ({ className }: { className: string }): JSX.Element {
       <PlasmicIcon__9BranchesStar className={styles.IconRight} />
       <PlasmicIcon__DoubleCircles className={styles.IconLeft} />
       <div className={className}>
-        <InlineWidget url="https://calendly.com/paulperson-pro/test" />
+        <InlineWidget url="https://calendly.com/anaelleguez" styles={{ height: "100%", minHeight: "487px" }} />
       </div>
     </div>
   )
