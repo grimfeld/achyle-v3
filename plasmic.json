@@ -400,11 +400,6 @@
       "indirect": false,
       "codeComponents": [
         {
-          "id": "XG5PDl0Ndj",
-          "name": "InputRange",
-          "componentImportPath": "./components/InputRange"
-        },
-        {
           "id": "AnL57GQcOM",
           "name": "Simulator",
           "componentImportPath": "./components/Simulator"
@@ -433,6 +428,16 @@
           "id": "CNliJAZqjw",
           "name": "CallToAction",
           "componentImportPath": "./components/CallToAction"
+        },
+        {
+          "id": "-W66eVbgvr",
+          "name": "InputRange",
+          "componentImportPath": "./components/InputRange"
+        },
+        {
+          "id": "KablALWxrr",
+          "name": "Calendly",
+          "componentImportPath": "./components/Calendly"
         }
       ]
     },

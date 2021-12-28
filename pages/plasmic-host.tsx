@@ -7,6 +7,7 @@ import { Form } from "@components/Form"
 import { InputText } from "@components/InputText"
 import { Slide, SlideShow } from "@components/SlideShow"
 import { CallToAction } from "@components/CallToAction"
+import { Calendly } from "@components/Calendly"
 
 // You can register any code components that you want to use here; see
 // https://docs.plasmic.app/learn/code-components-ref/
@@ -97,6 +98,14 @@ registerComponent(CallToAction, {
     light: "boolean"
   },
   importPath: "./components/CallToAction"
+})
+
+registerComponent(Calendly, {
+  name: "Calendly",
+  props: {
+    className: "string"
+  },
+  importPath: "./components/Calendly"
 })
 
 export default function Host () {

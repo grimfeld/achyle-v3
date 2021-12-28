@@ -35,7 +35,7 @@ import {
 } from "@plasmicapp/react-web";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
-import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-import: global/defaultcss
+
 import * as projectcss from "../achyle_2/plasmic_achyle_2.module.css"; // plasmic-import: 9mqNJRrUCJdF1Qi4kUEnK1/projectcss
 import * as sty from "./PlasmicLink.module.css"; // plasmic-import: 5MLV0Vivwy/css
 
@@ -85,12 +85,7 @@ function PlasmicLink__RenderFunc(props: {
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      className={classNames(
-        defaultcss.a,
-        projectcss.a,
-        projectcss.root_reset,
-        sty.root
-      )}
+      className={classNames(projectcss.a, projectcss.root_reset, sty.root)}
       component={Link}
       href={args.target}
       platform={"nextjs"}
@@ -98,7 +93,7 @@ function PlasmicLink__RenderFunc(props: {
       <div
         data-plasmic-name={"freeBox"}
         data-plasmic-override={overrides.freeBox}
-        className={classNames(defaultcss.all, projectcss.all, sty.freeBox)}
+        className={classNames(projectcss.all, sty.freeBox)}
       >
         {p.renderPlasmicSlot({
           defaultContents: "Label",

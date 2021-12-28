@@ -20,7 +20,7 @@
   width: auto;
   height: auto;
   max-width: 800px;
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
 }
 .slotTargetChildren {

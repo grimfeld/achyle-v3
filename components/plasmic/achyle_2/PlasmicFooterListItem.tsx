@@ -36,7 +36,7 @@ import {
 import Paragraph from "../../Paragraph"; // plasmic-import: ds4yKdokUn/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
-import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-import: global/defaultcss
+
 import * as projectcss from "./plasmic_achyle_2.module.css"; // plasmic-import: 9mqNJRrUCJdF1Qi4kUEnK1/projectcss
 import * as sty from "./PlasmicFooterListItem.module.css"; // plasmic-import: rmbHJKVaT7/css
 
@@ -85,28 +85,13 @@ function PlasmicFooterListItem__RenderFunc(props: {
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      className={classNames(
-        defaultcss.all,
-        projectcss.all,
-        projectcss.root_reset,
-        sty.root
-      )}
+      className={classNames(projectcss.all, projectcss.root_reset, sty.root)}
     >
-      <div
-        className={classNames(
-          defaultcss.all,
-          projectcss.all,
-          sty.freeBox__hqza
-        )}
-      >
+      <div className={classNames(projectcss.all, sty.freeBox__hqza)}>
         {p.renderPlasmicSlot({
           defaultContents: (
             <svg
-              className={classNames(
-                defaultcss.all,
-                projectcss.all,
-                sty.svg__khLhx
-              )}
+              className={classNames(projectcss.all, sty.svg__khLhx)}
               role={"img"}
             />
           ),
@@ -115,13 +100,7 @@ function PlasmicFooterListItem__RenderFunc(props: {
         })}
       </div>
 
-      <div
-        className={classNames(
-          defaultcss.all,
-          projectcss.all,
-          sty.freeBox__eonhB
-        )}
-      >
+      <div className={classNames(projectcss.all, sty.freeBox__eonhB)}>
         <Paragraph
           className={classNames("__wab_instance", sty.paragraph__smTsh)}
           dark={"dark" as const}
@@ -130,9 +109,8 @@ function PlasmicFooterListItem__RenderFunc(props: {
             defaultContents: (
               <div
                 className={classNames(
-                  defaultcss.all,
                   projectcss.all,
-                  defaultcss.__wab_text,
+                  projectcss.__wab_text,
                   sty.text__yrB5R
                 )}
               >

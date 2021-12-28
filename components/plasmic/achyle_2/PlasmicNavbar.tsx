@@ -36,7 +36,7 @@ import {
 import Link2 from "../../Link"; // plasmic-import: 5MLV0Vivwy/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
-import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-import: global/defaultcss
+
 import * as projectcss from "./plasmic_achyle_2.module.css"; // plasmic-import: 9mqNJRrUCJdF1Qi4kUEnK1/projectcss
 import * as sty from "./PlasmicNavbar.module.css"; // plasmic-import: TR4BFzjq4x/css
 
@@ -83,12 +83,7 @@ function PlasmicNavbar__RenderFunc(props: {
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      className={classNames(
-        defaultcss.all,
-        projectcss.all,
-        projectcss.root_reset,
-        sty.root
-      )}
+      className={classNames(projectcss.all, projectcss.root_reset, sty.root)}
     >
       {p.renderPlasmicSlot({
         defaultContents: (
@@ -119,24 +114,19 @@ function PlasmicNavbar__RenderFunc(props: {
         data-plasmic-name={"freeBox"}
         data-plasmic-override={overrides.freeBox}
         hasGap={true}
-        className={classNames(defaultcss.all, projectcss.all, sty.freeBox)}
+        className={classNames(projectcss.all, sty.freeBox)}
       >
         {p.renderPlasmicSlot({
           defaultContents: (
             <p.Stack
               as={"div"}
               hasGap={true}
-              className={classNames(
-                defaultcss.all,
-                projectcss.all,
-                sty.freeBox__wSrYc
-              )}
+              className={classNames(projectcss.all, sty.freeBox__wSrYc)}
             >
               <div
                 className={classNames(
-                  defaultcss.all,
                   projectcss.all,
-                  defaultcss.__wab_text,
+                  projectcss.__wab_text,
                   sty.text__y2P3A
                 )}
               >

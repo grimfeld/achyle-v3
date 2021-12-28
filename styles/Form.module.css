@@ -56,6 +56,7 @@
   right: -106px;
   width: 174px;
   height: 174px;
+  display: none; /* REMOVE WHEN SWITCHING TO FORM */
 }
 
 .IconRight path {
@@ -69,6 +70,7 @@
   left: -55px;
   width: 185px;
   height: 194px;
+  display: none; /* REMOVE WHEN SWITCHING TO FORM */
 }
 
 .IconLeft path {

@@ -36,7 +36,7 @@ import {
 import Paragraph from "../../Paragraph"; // plasmic-import: ds4yKdokUn/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
-import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-import: global/defaultcss
+
 import * as projectcss from "./plasmic_achyle_2.module.css"; // plasmic-import: 9mqNJRrUCJdF1Qi4kUEnK1/projectcss
 import * as sty from "./PlasmicListItem.module.css"; // plasmic-import: xUitMmxl0F/css
 
@@ -80,17 +80,12 @@ function PlasmicListItem__RenderFunc(props: {
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      className={classNames(
-        defaultcss.all,
-        projectcss.all,
-        projectcss.root_reset,
-        sty.root
-      )}
+      className={classNames(projectcss.all, projectcss.root_reset, sty.root)}
     >
       <ListStyleGreenIcon
         data-plasmic-name={"svg"}
         data-plasmic-override={overrides.svg}
-        className={classNames(defaultcss.all, projectcss.all, sty.svg)}
+        className={classNames(projectcss.all, sty.svg)}
         role={"img"}
       />
 
@@ -102,9 +97,8 @@ function PlasmicListItem__RenderFunc(props: {
           >
             <div
               className={classNames(
-                defaultcss.all,
                 projectcss.all,
-                defaultcss.__wab_text,
+                projectcss.__wab_text,
                 sty.text__fve2L
               )}
             >

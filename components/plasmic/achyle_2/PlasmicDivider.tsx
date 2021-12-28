@@ -35,7 +35,7 @@ import {
 } from "@plasmicapp/react-web";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
-import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-import: global/defaultcss
+
 import * as projectcss from "./plasmic_achyle_2.module.css"; // plasmic-import: 9mqNJRrUCJdF1Qi4kUEnK1/projectcss
 import * as sty from "./PlasmicDivider.module.css"; // plasmic-import: 79e3ncUiiG/css
 
@@ -73,17 +73,12 @@ function PlasmicDivider__RenderFunc(props: {
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      className={classNames(
-        defaultcss.all,
-        projectcss.all,
-        projectcss.root_reset,
-        sty.root
-      )}
+      className={classNames(projectcss.all, projectcss.root_reset, sty.root)}
     >
       <div
         data-plasmic-name={"freeBox"}
         data-plasmic-override={overrides.freeBox}
-        className={classNames(defaultcss.all, projectcss.all, sty.freeBox)}
+        className={classNames(projectcss.all, sty.freeBox)}
       />
     </div>
   ) as React.ReactElement | null;

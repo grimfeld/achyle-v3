@@ -18,9 +18,11 @@
   width: 40px;
   height: 40px;
   flex-shrink: 0;
+  display: block;
 }
 .root:hover .svg {
   color: #ffffff /* plasmic-token: JSKB1tujS */;
+  display: block;
 }
 .paragraph___8FZlh:global(.__wab_instance) {
   max-width: 100%;

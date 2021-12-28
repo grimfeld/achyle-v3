@@ -20,13 +20,11 @@
   border-color: #c8c7c1;
 }
 .root:focus-within {
-  pointer-events: none;
   box-shadow: 0px 0px 0px 3px #96c7f2;
   outline: none;
   border-radius: 6px;
 }
 .root_____focusVisibleWithin {
-  pointer-events: none;
   box-shadow: 0px 0px 0px 3px #96c7f2;
   outline: none;
   border-radius: 6px;
